@@ -151,7 +151,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--i
 .savebar.on { transform: none; }
 .savebar span { flex: 1; font-size: .88rem; }
 .savebar .btn-ghost { color: var(--cream); }
-.savebar .btn-primary { color: var(--ink); }
+.savebar .btn-primary { color: #fff; }
 .savebar .btn-ghost:hover { background: rgba(255,255,255,.1); }
 .progress-line { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 100; background: linear-gradient(90deg, transparent, var(--yellow-2), transparent); background-size: 50% 100%; animation: prog 1s linear infinite; }
 @keyframes prog { from { background-position: -50% 0; } to { background-position: 150% 0; } }
@@ -266,7 +266,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--i
 .photo-add { display: grid; place-items: center; align-content: center; gap: .4rem; min-height: 150px; border-radius: 12px; border: 2px dashed var(--sand); color: var(--muted); font-size: .85rem; text-align: center; padding: .8rem; }
 .photo-add:hover { border-color: var(--cta); color: var(--cta); }
 .photo-add svg { width: 26px; height: 26px; }
-.trow { display: grid; grid-template-columns: 1fr 9rem 40px; gap: .5rem; align-items: center; margin-bottom: .45rem; }
+.trow { display: grid; grid-template-columns: minmax(0, 1fr) 7.5rem 40px; gap: .5rem; align-items: center; margin-bottom: .45rem; }
 .trow.t3 { grid-template-columns: 1.2fr 1.6fr 8rem 9rem 40px; }
 @media (max-width: 640px) { .trow.t3 { grid-template-columns: 1fr 1fr; } .trow.t3 > :nth-child(2) { grid-column: 1 / -1; order: 3; } .trow.t3 > :last-child { justify-self: end; } }
 .trow input { min-width: 0; }
