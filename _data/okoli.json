@@ -1,0 +1,22 @@
+{
+  "zima": [
+    { "ikona": "mountain", "nadpis": "Tanvaldský Špičák", "text": "Největší středisko v okolí Desné se sjezdovkami pro celou rodinu a lanovkou na vrchol.", "stitek": "" },
+    { "ikona": "mountain", "nadpis": "Ski areál Černá Říčka", "text": "Menší areál kousek od Desné, vhodný pro děti a začátečníky.", "stitek": "" },
+    { "ikona": "snowflake", "nadpis": "Jizerská magistrála", "text": "Penzion leží poblíž magistrály, kterou využívají běžkaři — na stopu vyrazíte bez převážení lyží autem.", "stitek": "běžky poblíž penzionu" },
+    { "ikona": "landmark", "nadpis": "Harrachov, Rokytnice, Příchovice a Rejdice", "text": "Další vleky a sjezdovky v okolí Desné; v Harrachově navíc skokanské můstky a Sklářské muzeum.", "stitek": "" }
+  ],
+  "leto": [
+    { "foto": { "src": "images/okoli-protrzena-prehrada.jpg", "alt": "Protržená přehrada na Bílé Desné — kamenná hráz v podzimním lese", "w": 1280, "h": 576 }, "stitek": "8,5 km", "nadpis": "Protržená přehrada na Bílé Desné", "text": "Nejznámější výlet v okolí — zbytky hráze, která se protrhla v roce 1916." },
+    { "foto": { "src": "images/okoli-vodopady.jpg", "alt": "Vodopády Černé Desné — kaskády mezi balvany a smrky", "w": 1280, "h": 576 }, "stitek": "pěšky od domu", "nadpis": "Vodopády Černé Desné", "text": "Kaskády v lese nad Desnou, příjemná procházka i s dětmi." },
+    { "foto": { "src": "images/okoli-sous.jpg", "alt": "Vodní nádrž Souš s věží hráze a podzimním porostem", "w": 1280, "h": 577 }, "stitek": "", "nadpis": "Přehrada Souš", "text": "Vodní nádrž s věží hráze uprostřed Jizerských hor." },
+    { "foto": { "src": "images/okoli-tunel.jpg", "alt": "Kamenný portál propojovacího tunelu Bílé a Černé Desné", "w": 1280, "h": 577 }, "stitek": "", "nadpis": "Propojovací tunel Bílé a Černé Desné", "text": "Technická památka na trase k protržené přehradě — kamenný portál v lese." }
+  ],
+  "den": [
+    { "nazev": "Cyklotrasa „Járy Cimrmana“", "text": "Vede nedaleko penzionu; okolí je protkané cyklistickými i turistickými trasami." },
+    { "nazev": "Tenisový areál v Desné", "text": "Přímo v obci, pár minut od penzionu." },
+    { "nazev": "Liberec — Ještěd, ZOO a Centrum Babylon", "text": "Aquapark v Babylonu ocení děti po celý rok." },
+    { "nazev": "Rozhledna Štěpánka", "text": "Kamenná rozhledna nad Kořenovem s výhledem na Jizerky i Krkonoše." },
+    { "nazev": "Jablonec nad Nisou", "text": "Město bižuterie s muzeem skla a šperku." },
+    { "nazev": "Harrachov — Sklářské muzeum", "text": "Sklárna s muzeem a exkurzemi." }
+  ]
+}

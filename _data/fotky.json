@@ -1,0 +1,185 @@
+{
+  "hero": [
+    {
+      "src": "images/hero-dum.webp",
+      "m": "images/hero-dum-m.webp",
+      "alt": "Rodinný penzion Bella v Desné — světlá fasáda, ovál s nápisem Bella a číslo 410 nad vchodem",
+      "pos": "50% 62%",
+      "w": 1920,
+      "h": 1087
+    },
+    {
+      "src": "images/hero-pokoj.webp",
+      "m": "images/hero-pokoj-m.webp",
+      "alt": "Pokoj v penzionu s manželskou postelí, pohovkou a dřevěným trámem",
+      "pos": "50% 58%",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "src": "images/hero-spolecenska.webp",
+      "m": "images/hero-spolecenska-m.webp",
+      "alt": "Společenská místnost s barovým pultem u kuchyňky, dlouhým stolem a dřevěnou galerií",
+      "pos": "50% 55%",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "src": "images/hero-fotbalek.webp",
+      "m": "images/hero-fotbalek-m.webp",
+      "alt": "Společenská místnost s fotbálkem, koženou sedačkou, dlouhým stolem a schodištěm na galerii",
+      "pos": "50% 60%",
+      "w": 1920,
+      "h": 1080
+    }
+  ],
+  "kolaz": [
+    {
+      "src": "images/spolecenska-a.jpg",
+      "alt": "Velká společenská místnost s dřevěnou galerií a dlouhým jídelním stolem",
+      "w": 1280,
+      "h": 960,
+      "popisek": "Společenská místnost s galerií v patře"
+    },
+    {
+      "src": "images/kuchyn-spolecna.jpg",
+      "alt": "Společná kuchyňka s linkou, lednicí, troubou a myčkou",
+      "w": 1280,
+      "h": 576,
+      "popisek": "Kuchyňka pro velkou skupinu"
+    },
+    {
+      "src": "images/spolecenska-fotbalek.jpg",
+      "alt": "Fotbálek a jídelní stůl pod dřevěnými trámy",
+      "w": 1280,
+      "h": 960,
+      "popisek": "Fotbálek a šipky přímo v domě"
+    }
+  ],
+  "spolecne": [
+    {
+      "src": "images/dum-leto.jpg",
+      "alt": "Penzion Bella v létě — fasáda s hrázděným štítem, trávník a smrky",
+      "w": 1280,
+      "h": 840
+    },
+    {
+      "src": "images/dum-noc.jpg",
+      "alt": "Penzion Bella večer s rozsvíceným nápisem Bella nad vchodem",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/spolecenska-a.jpg",
+      "alt": "Velká společenská místnost s dřevěnou galerií a dlouhým jídelním stolem",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "src": "images/spolecenska-fotbalek.jpg",
+      "alt": "Fotbálek a jídelní stůl pod dřevěnými trámy ve společenské místnosti",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "src": "images/spolecenska-sipky.jpg",
+      "alt": "Terč na šipky ve společné části penzionu",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "src": "images/hala-galerie.jpg",
+      "alt": "Pohled z dřevěné galerie v patře do společenské místnosti",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/kuchyn-spolecna.jpg",
+      "alt": "Společná kuchyňka s linkou, lednicí, troubou a myčkou",
+      "w": 1280,
+      "h": 576
+    },
+    {
+      "src": "images/posezeni-gril.jpg",
+      "alt": "Venkovní posezení s krbem a grilem na dvorku před penzionem",
+      "w": 541,
+      "h": 1200
+    }
+  ],
+  "dalsi": [
+    {
+      "src": "images/ap2-koupelna.jpg",
+      "alt": "Apartmán č. 2 — sprchový kout, WC a umyvadlo",
+      "w": 900,
+      "h": 1200
+    },
+    {
+      "src": "images/ap3-koupelna.jpg",
+      "alt": "Apartmán č. 3 — sprchový kout, WC a umyvadlo",
+      "w": 1280,
+      "h": 1280
+    },
+    {
+      "src": "images/vchod-410.jpg",
+      "alt": "Hlavní vchod penzionu s číslem popisným 410",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/vchod-vedlejsi.jpg",
+      "alt": "Vedlejší vchod do apartmánu se samostatným vstupem",
+      "w": 1280,
+      "h": 576
+    }
+  ],
+  "okoli": [
+    {
+      "src": "images/okoli-protrzena-prehrada.jpg",
+      "alt": "Protržená přehrada na Bílé Desné — kamenná hráz v podzimním lese",
+      "w": 1280,
+      "h": 576
+    },
+    {
+      "src": "images/okoli-vodopady.jpg",
+      "alt": "Vodopády Černé Desné — kaskády mezi balvany",
+      "w": 1280,
+      "h": 576
+    },
+    {
+      "src": "images/okoli-vodopady-b.jpg",
+      "alt": "Černá Desná — bystřina v podzimním lese",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/okoli-vodopady-c.jpg",
+      "alt": "Kamenité koryto Černé Desné pod vodopády",
+      "w": 1280,
+      "h": 576
+    },
+    {
+      "src": "images/okoli-tunel.jpg",
+      "alt": "Kamenný portál propojovacího tunelu Bílé a Černé Desné",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/okoli-sous.jpg",
+      "alt": "Vodní nádrž Souš s věží hráze",
+      "w": 1280,
+      "h": 577
+    },
+    {
+      "src": "images/okoli-socha.jpg",
+      "alt": "Dřevěná socha u lesní cesty v okolí Desné",
+      "w": 541,
+      "h": 1200
+    },
+    {
+      "src": "images/okoli-houby.jpg",
+      "alt": "Hřib v mechu — okolí Desné je rájem houbařů",
+      "w": 1280,
+      "h": 577
+    }
+  ]
+}

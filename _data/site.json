@@ -1,0 +1,49 @@
+{
+  "nazev": "Rodinný penzion Bella",
+  "kratky": "Penzion Bella",
+  "podtitul": "Desná · Jizerské hory",
+  "majitel": "Petr Šilhán",
+  "ulice": "Údolní 410",
+  "psc": "468 61",
+  "obec": "Desná",
+  "obec_lokal": "Desné",
+  "region": "Jizerské hory",
+  "kraj": "Liberecký kraj",
+  "telefony": [
+    {
+      "jmeno": "Petr",
+      "cislo": "721 929 462"
+    },
+    {
+      "jmeno": "Dáša",
+      "cislo": "732 789 550"
+    }
+  ],
+  "email": "petr.silhan@centrum.cz",
+  "gps": {
+    "lat": 50.754569444,
+    "lon": 15.310519167
+  },
+  "mapy_url": "https://mapy.com/zakladni?q=%C3%9Adoln%C3%AD%20410%2C%20Desn%C3%A1",
+  "echalupy_url": "https://www.e-chalupy.cz/penzion-desna-ubytovani-o14112",
+  "echalupy_terminy": "https://www.e-chalupy.cz/penzion-desna-ubytovani-o14112#volne-terminy",
+  "kapacita": {
+    "min": 12,
+    "max": 17,
+    "apartmany": 4,
+    "loznice": 7
+  },
+  "domena": "https://penzion-bella.cz",
+  "indexovat": false,
+  "og_foto": "images/dum-leto.jpg",
+  "nekuracky": true,
+  "mazlicci": false,
+  "vybaveni_seo": [
+    "Čtyři samostatné apartmány s vlastním WC a sprchovým koutem",
+    "Společenská místnost s kuchyňkou",
+    "Fotbálek, šipky a dětský koutek",
+    "Wi-Fi zdarma",
+    "Parkování na soukromém pozemku",
+    "Terasa, venkovní krb a gril"
+  ]
+}

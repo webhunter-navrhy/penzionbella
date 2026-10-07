@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, sekce_hlava, rec_karta, rec_souhrn, poptavka_sekce, cta_sekce %}
+{% set P = T.recenze %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+<section class="sekce sekce--plocha" id="recenze" aria-labelledby="recenze-h"><div class="container">{{ sekce_hlava('recenze-h', T.uvod.recenze_nadpis, T.uvod.recenze_text) }}
+{{ rec_souhrn() }}
+<div class="karty karty--2">{% for r in R.recenze %}{{ rec_karta(r) }}{% endfor %}</div></div></section>
+{{ poptavka_sekce(P.poptavka_nadpis, P.poptavka_lead, fid='pf-rec') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

@@ -1,0 +1,51 @@
+{
+  "nadpis": "Ceník 2026",
+  "uvod": "Ceny jsou za osobu a noc a platí pro pronájem celého objektu. K ceně se připočítává spotřebovaný plyn a pobytový poplatek městu 15 Kč za osobu a noc (od 18 let).",
+  "od_ceny": 300,
+  "od_ceny_pozn": "při pobytu na 6–7 nocí",
+  "rozpeti": "300–370 Kč / osoba / noc",
+  "delka_nadpis": "Cena podle délky pobytu — za osobu a noc",
+  "delka": [
+    { "noci": "6–7 nocí", "cena": "300" },
+    { "noci": "4–5 nocí", "cena": "310" },
+    { "noci": "3 nocí", "cena": "340" },
+    { "noci": "2 noci", "cena": "370" }
+  ],
+  "min_pobyt": "2 noci",
+  "sezony_nadpis": "Sezóny a zvláštní termíny — cena za osobu a noc",
+  "sezony": [
+    { "nazev": "Zimní sezóna", "pozn": "Plus spotřebovaný plyn.", "cena": "300", "stitek": "" },
+    { "nazev": "Letní sezóna", "pozn": "1. 7. – 31. 8. 2026.", "cena": "310–380", "stitek": "" },
+    { "nazev": "Jarní prázdniny", "pozn": "Při 6–7 nocích; při 4–5 nocích 320 Kč. Plus plyn.", "cena": "310", "stitek": "" },
+    { "nazev": "Velikonoce", "pozn": "Plus spotřebovaný plyn.", "cena": "320", "stitek": "" },
+    { "nazev": "Vánoce", "pozn": "Vánoční stromeček na ozdobení po dohodě.", "cena": "330", "stitek": "" },
+    { "nazev": "Silvestr", "pozn": "Za celý objekt na 5 nocí. Plus plyn.", "cena": "32000", "stitek": "2026 obsazeno" }
+  ],
+  "podminky_nadpis": "Poplatky a podmínky",
+  "podminky": [
+    "Ceny jsou za osobu a noc. Objekt se pronajímá celý pro 12 až 17 osob; po dohodě je možné ubytovat i méně lidí.",
+    "Minimální délka pobytu jsou dvě noci. Čím delší pobyt, tím nižší cena za osobu a noc.",
+    "Vratná kauce 5 000 Kč se vrací po předání objektu.",
+    "Spotřebovaný plyn (vytápění a ohřev vody) se účtuje zvlášť podle skutečné spotřeby, není součástí ceny za osobu a noc.",
+    "Pobytový poplatek městu Desná 15 Kč za osobu a noc platí hosté od 18 let.",
+    "Objekt je nekuřácký a domácí mazlíčci nejsou povoleni.",
+    "Silvestrovský pobyt se pronajímá jako celý objekt na pět nocí za 32 000 Kč plus spotřeba plynu. Termín na Silvestra 2026 je již obsazený.",
+    "K zapůjčení je výčepní zařízení PYGMY 25/K Green Line."
+  ],
+  "poznamka": "Ceník 2026. Konečnou cenu potvrdíme e-mailem nebo telefonicky předem.",
+  "volne": {
+    "zobrazit": true,
+    "nadpis": "Volné podzimní víkendy 2026",
+    "text": "Last minute nabídka majitele: 370 Kč za dospělou osobu a noc plus spotřebovaný plyn.",
+    "tabulka_nadpis": "Volné termíny — cena za dospělou osobu a noc",
+    "tlacitko": "Poptat víkend",
+    "terminy": [
+      { "termin": "16.–18. 10. 2026", "cena": "370" },
+      { "termin": "23.–25. 10. 2026", "cena": "370" },
+      { "termin": "6.–8. 11. 2026", "cena": "370" },
+      { "termin": "13.–15. 11. 2026", "cena": "370" },
+      { "termin": "20.–22. 11. 2026", "cena": "370" },
+      { "termin": "27.–29. 11. 2026", "cena": "370" }
+    ]
+  }
+}

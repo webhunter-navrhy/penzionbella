@@ -1,0 +1,199 @@
+{
+  "uvod": {
+    "title": "Rodinný penzion Bella — ubytování v Desné v Jizerských horách",
+    "description": "Celý penzion pro 12–17 osob v Desné: 4 samostatné apartmány, 7 ložnic, velká společenská místnost s kuchyňkou, fotbálek a šipky. Vlak 200 m, parkování u domu. Od 300 Kč za osobu a noc.",
+    "og_description": "Celý penzion pro 12–17 osob ve čtyřech apartmánech. Společenská místnost, fotbálek, šipky, parkování u domu, vlak 200 m. Hodnocení 4,9 z 5 od 19 hostů.",
+    "seo_popis": "Rodinný penzion v Desné v Jizerských horách. Objekt se pronajímá celý pro 12 až 17 osob: čtyři samostatné apartmány se sedmi ložnicemi, velká společenská místnost s kuchyňkou, fotbálek, šipky a dětský koutek, parkování na soukromém pozemku.",
+    "h1": "Penzion Bella — ubytování v Desné v Jizerských horách",
+    "perex": "Celý penzion jen pro vaši partu nebo několik rodin — čtyři apartmány, 12–17 lůžek.",
+    "perex_detail": "Velká společenská místnost s kuchyňkou, fotbálek a šipky, parkování před domem.",
+    "znacky": [
+      { "ikona": "map-pin", "text": "Údolní 410, Desná" },
+      { "ikona": "users", "text": "12–17 osob ve 4 apartmánech" },
+      { "ikona": "tram-front", "text": "Vlak 200 m od domu" }
+    ],
+    "lista_poznamka": "Poptávka je nezávazná, jednáte přímo s majitelem",
+    "usp": [
+      { "ikona": "house", "nadpis": "Celý penzion jen pro vás", "text": "12–17 osob ve 4 apartmánech, po dohodě i méně" },
+      { "ikona": "users", "nadpis": "Společenská místnost pro všechny", "text": "Velký stůl, sedačka, chytrá TV a reproduktor" },
+      { "ikona": "gamepad2", "nadpis": "Fotbálek, šipky, dětský koutek", "text": "Zábava pro dospělé i děti přímo v domě" },
+      { "ikona": "tram-front", "nadpis": "Vlak 200 m od domu", "text": "Trať Tanvald – Kořenov – Harrachov" },
+      { "ikona": "car", "nadpis": "Parkování před penzionem", "text": "Na upraveném soukromém pozemku" },
+      { "ikona": "wifi", "nadpis": "Wi-Fi v celém domě", "text": "Plus chytrá televize a bluetooth reproduktor" }
+    ],
+    "onas_nadpis": "Celý dům pro několik rodin nebo partu přátel",
+    "onas_lead": "Penzion Bella stojí v klidné části Desné, s dobrou dostupností do Jizerských hor i Krkonoš. Pronajímá se jako celý objekt: čtyři samostatné apartmány se sedmi ložnicemi, dohromady pro 12 až 17 osob. Po dohodě ubytujeme i menší skupinu.",
+    "onas_body": [
+      "Každý apartmán má vlastní WC a sprchový kout, dva z nich i kuchyňku a samostatný vchod.",
+      "Velká společenská místnost s kuchyňkou spojí celou skupinu — a apartmány dávají každé rodině soukromí.",
+      "Fotbálek, šipky, dětský koutek, chytrá televize a bluetooth reproduktor jsou v domě.",
+      "Vlaková zastávka na trati Tanvald – Kořenov – Harrachov je asi 200 metrů od domu, parkujete na soukromém pozemku před penzionem."
+    ],
+    "cisla": [
+      { "cislo": "12–17", "popis": "osob v celém objektu" },
+      { "cislo": "4", "popis": "samostatné apartmány" },
+      { "cislo": "7", "popis": "ložnic v domě" },
+      { "cislo": "200 m", "popis": "k vlakové zastávce" }
+    ],
+    "apartmany_nadpis": "Čtyři apartmány, sedm ložnic",
+    "apartmany_text": "Každý apartmán má vlastní WC a sprchový kout. Objekt se pronajímá celý, takže apartmány si rozdělíte podle toho, jak přijedete.",
+    "galerie_nadpis": "Fotografie penzionu",
+    "galerie_text": "Dům v létě i večer, společné prostory, všechny čtyři apartmány. Klikněte na fotku pro zvětšení.",
+    "recenze_nadpis": "Co říkají hosté",
+    "recenze_text": "Hodnocení hostů, kteří u nás bydleli — včetně odpovědi majitele na připomínku."
+  },
+  "vybaveni": {
+    "nadpis": "Vybavení a služby v domě",
+    "text": "Co je ve společných prostorách k dispozici všem hostům.",
+    "polozky": [
+      { "ikona": "users", "nadpis": "Společenská místnost s kuchyňkou", "text": "Prostorný stůl pro celou partu, sedací souprava, chytrá televize s bluetooth reproduktorem a WC." },
+      { "ikona": "utensils", "nadpis": "Kuchyňka pro velkou skupinu", "text": "Dvě mikrovlnky, dvě lednice a mrazák, myčka, dvě rychlovarné konvice, plynový vařič, elektrická trouba, kávovar, toustovač a topinkovač." },
+      { "ikona": "gamepad2", "nadpis": "Fotbálek, šipky a dětský koutek", "text": "Zábava pro dospělé i děti přímo ve společné části domu — nemusíte nikam jezdit." },
+      { "ikona": "bath", "nadpis": "Čtyři samostatné apartmány", "text": "Každý apartmán má vlastní WC a sprchový kout; apartmány č. 1 a 2 mají navíc kuchyňku a samostatný vchod." },
+      { "ikona": "flame", "nadpis": "Terasa, venkovní krb a gril", "text": "Před domem je malý dvorek s posezením, krbem a grilem — na letní večery se skupinou." },
+      { "ikona": "car", "nadpis": "Parkování na soukromém pozemku", "text": "Přímo před penzionem, na upraveném soukromém pozemku." },
+      { "ikona": "thermometer", "nadpis": "Vytápění a Wi-Fi", "text": "Centrální plynové topení a přímotopy, Wi-Fi v celém objektu. Spotřebovaný plyn se účtuje podle skutečné spotřeby." },
+      { "ikona": "beer", "nadpis": "Výčepní zařízení k zapůjčení", "text": "K pobytu si můžete půjčit výčepní zařízení PYGMY 25/K Green Line." },
+      { "ikona": "utensils", "nadpis": "Stravování podle vás", "text": "Vaříte si sami ve společné kuchyňce nebo v apartmánu, v okolí jsou restaurace a jídlo lze dovézt z nedaleké jídelny Sklář." }
+    ]
+  },
+  "apartmany": {
+    "title": "Apartmány a dispozice — Rodinný penzion Bella, Desná",
+    "description": "Čtyři samostatné apartmány se sedmi ložnicemi a 17 lůžky. Každý apartmán má vlastní WC a sprchový kout, dva mají kuchyňku a samostatný vchod, jeden balkon. Objekt se pronajímá celý.",
+    "h1": "Apartmány a dispozice",
+    "perex": "Čtyři samostatné apartmány, 7 ložnic a 17 lůžek. Každý apartmán má vlastní WC a sprchový kout; apartmány č. 1 a 2 navíc kuchyňku a samostatný vchod.",
+    "foto": "images/ap3-obyvak.webp",
+    "foto_alt": "Apartmán č. 3: pokoj s manželskou postelí a sedací soupravou",
+    "pos": "50% 60%",
+    "seznam_nadpis": "Vyberte si apartmán",
+    "seznam_text": "Penzion se pronajímá jako celek, apartmány si tedy rozdělíte podle toho, jak přijedete. Po dohodě ubytujeme i menší skupinu.",
+    "kapacita_nadpis": "Přehled kapacity",
+    "kapacita_celkem_patro": "přízemí a 1. patro",
+    "kapacita_celkem_vybaveni": "společenská místnost s kuchyňkou, WC v přízemí",
+    "kapacita_pozn": "Kapacita objektu je 12 až 17 osob. Rozdělení lůžek odpovídá popisu majitele na e-chalupy.cz.",
+    "detail_body": [
+      "Apartmán je součástí pronájmu celého penzionu pro 12–17 osob; po dohodě je možné ubytovat i menší skupinu.",
+      "Všem hostům je k dispozici velká společenská místnost s kuchyňkou, fotbálkem, šipkami a dětským koutkem.",
+      "K ceně se připočítává spotřebovaný plyn a pobytový poplatek 15 Kč za osobu a noc od 18 let; vratná kauce je 5 000 Kč."
+    ]
+  },
+  "cenik": {
+    "title": "Ceník 2026 — Rodinný penzion Bella, Desná v Jizerských horách",
+    "description": "Od 300 Kč za osobu a noc při pobytu na 6–7 nocí, 370 Kč při dvou nocích. Zimní sezóna 300 Kč, léto 310–380 Kč, Vánoce 330 Kč, Silvestr 32 000 Kč za objekt. Kauce 5 000 Kč, plyn zvlášť.",
+    "h1": "Ceník 2026",
+    "perex": "Od 300 Kč za osobu a noc. Ceny platí pro pronájem celého objektu; plyn a pobytový poplatek se účtují zvlášť, nic dalšího se nepřipočítává.",
+    "foto": "images/dum-noc.jpg",
+    "foto_alt": "Penzion Bella večer s rozsvíceným nápisem Bella nad vchodem",
+    "pos": "50% 50%",
+    "poptavka_nadpis": "Spočítáme vám cenu pobytu",
+    "poptavka_lead": "Napište termín a počet osob — pošleme přesnou cenu včetně pobytového poplatku a odhadu spotřeby plynu."
+  },
+  "galerie": {
+    "title": "Galerie — Rodinný penzion Bella, Desná v Jizerských horách",
+    "description": "Fotografie penzionu Bella: dům v létě i večer, společenská místnost s galerií, kuchyňka, fotbálek a šipky, všechny čtyři apartmány i okolí Desné.",
+    "h1": "Galerie penzionu",
+    "perex": "{fotky} fotografií domu, společných prostor a všech čtyř apartmánů plus {okoli} snímků okolí. Klikněte na fotku pro zvětšení.",
+    "foto": "images/spolecenska-a.jpg",
+    "foto_alt": "Velká společenská místnost penzionu s dřevěnou galerií",
+    "pos": "50% 55%",
+    "dum_nadpis": "Dům a apartmány",
+    "dum_text": "Dům v létě i večer, společné prostory a všechny čtyři apartmány včetně koupelen.",
+    "okoli_nadpis": "Okolí Desné",
+    "okoli_text": "Protržená přehrada, vodopády Černé Desné, přehrada Souš a lesy nad Desnou — vše v dosahu pěší nebo krátké cesty autem.",
+    "poptavka_nadpis": "Chcete se u nás ubytovat?",
+    "poptavka_lead": "Vyplňte termín, počet osob a kontakt. Ověříme dostupnost a pošleme cenu — nic tím neplatíte."
+  },
+  "okoli": {
+    "title": "Okolí a výlety — Penzion Bella, Desná v Jizerských horách",
+    "description": "Tanvaldský Špičák, Černá Říčka, Harrachov a Rokytnice, Jizerská magistrála pro běžkaře. V létě protržená přehrada na Bílé Desné, vodopády Černé Desné, přehrada Souš a cyklotrasa Járy Cimrmana.",
+    "h1": "Okolí penzionu a tipy na výlety",
+    "perex": "Desná leží mezi Jizerskými horami a Krkonošemi: lyžařské vleky v okolí, Jizerská magistrála pro běžkaře, v létě protržená přehrada, vodopády a přehrada Souš.",
+    "foto": "images/okoli-vodopady.jpg",
+    "foto_alt": "Vodopády Černé Desné — kaskády mezi balvany a smrky",
+    "pos": "50% 55%",
+    "nadpis": "Okolí penzionu — zima i léto",
+    "text": "Desná leží mezi Jizerskými horami a Krkonošemi — sjezdovky, běžecká magistrála i výlety k protržené přehradě máte na dosah.",
+    "zima_nadpis": "Zimní sezóna",
+    "leto_nadpis": "Léto a výlety",
+    "den_nadpis": "Na celý den",
+    "poptavka_nadpis": "Naplánujte si pobyt",
+    "poptavka_lead": "Napište termín a počet osob. Zimní víkendy a jarní prázdniny bývají obsazené dřív — ozvěte se s předstihem."
+  },
+  "recenze": {
+    "title": "Recenze hostů — Rodinný penzion Bella, Desná",
+    "description": "Hodnocení 4,9 z 5 od 19 hostů na e-chalupy.cz, 100 % hostů penzion doporučuje. Přečtěte si, co o pobytu napsaly rodiny, party přátel i skupiny několika rodin.",
+    "h1": "Recenze hostů",
+    "perex": "Hodnocení 4,9 z 5 od 19 hostů na e-chalupy.cz, 100 % z nich penzion doporučuje. Níže je všech 15 recenzí s textem, tak jak je hosté napsali.",
+    "foto": "images/spolecenska-fotbalek.jpg",
+    "foto_alt": "Společenská místnost penzionu s fotbálkem a jídelním stolem",
+    "pos": "50% 55%",
+    "poptavka_nadpis": "Chcete u nás strávit pobyt?",
+    "poptavka_lead": "Vyplňte termín, počet osob a kontakt. Ověříme dostupnost a pošleme cenu — nic tím neplatíte."
+  },
+  "kontakt": {
+    "title": "Kontakt a příjezd — Rodinný penzion Bella, Údolní 410, Desná",
+    "description": "Rodinný penzion Bella, Údolní 410, 468 61 Desná. Telefon Petr 721 929 462, Dáša 732 789 550, e-mail petr.silhan@centrum.cz. Vlaková zastávka 200 m, parkování na soukromém pozemku před domem.",
+    "h1": "Kontakt a příjezd",
+    "perex": "Volejte: Petr 721 929 462, Dáša 732 789 550. Nebo napište na petr.silhan@centrum.cz.",
+    "foto": "images/vchod-410.jpg",
+    "foto_alt": "Hlavní vchod penzionu Bella s číslem popisným 410",
+    "pos": "50% 50%",
+    "nadpis": "Kde nás najdete",
+    "uvod": "Údolní 410 v Desné, v klidné části obce pod Jizerskými horami. Dům poznáte podle oválu s nápisem Bella nad vchodem a čísla 410.",
+    "email_pozn": "Podle recenzí hostů majitelé reagují téměř ihned",
+    "prijezd": [
+      { "ikona": "car", "nadpis": "Autem", "text": "Do Desné po silnici I/10 z Tanvaldu směr Harrachov, pak do ulice Údolní k domu č. p. 410. Parkujete přímo před penzionem na soukromém pozemku." },
+      { "ikona": "tram-front", "nadpis": "Vlakem", "text": "Zastávka na trati Tanvald – Kořenov – Harrachov je zhruba 200 metrů od penzionu. Odtud se pohodlně dostanete i na hřebeny Jizerských hor." },
+      { "ikona": "navigation", "nadpis": "Autobusem", "text": "Autobusová zastávka je v Desné v docházkové vzdálenosti; z ní je to k protržené přehradě 3,7 km." }
+    ],
+    "poptavka_nadpis": "Napište nám",
+    "poptavka_lead": "Termín, počet osob a kontakt — ověříme dostupnost a pošleme cenu. Poptávka je nezávazná."
+  },
+  "rezervace": {
+    "title": "Poptávka termínu — Rodinný penzion Bella, Desná",
+    "description": "Nezávazná poptávka pobytu v penzionu Bella: příjezd, odjezd, počet osob a kontakt. Ověříme dostupnost a pošleme cenu včetně pobytového poplatku a odhadu spotřeby plynu.",
+    "h1": "Poptávka termínu",
+    "perex": "Vyplňte termín, počet osob a kontakt. Ověříme, jestli je penzion volný, a pošleme cenu — poptávka je nezávazná a nic tím neplatíte.",
+    "foto": "images/hala-galerie.jpg",
+    "foto_alt": "Pohled z dřevěné galerie v patře do společenské místnosti penzionu",
+    "pos": "50% 50%",
+    "kroky_nadpis": "Jak rezervace probíhá",
+    "kroky": [
+      "Pošlete poptávku s termínem a počtem osob — nebo rovnou zavoláte: Petr 721 929 462, Dáša 732 789 550.",
+      "Ověříme, že je termín volný, a potvrdíme cenu za osobu a noc podle délky pobytu a sezóny.",
+      "Domluvíme podrobnosti pobytu: předání objektu, vratnou kauci 5 000 Kč a odečet plynu.",
+      "Při odjezdu doplatíte spotřebovaný plyn a pobytový poplatek 15 Kč za osobu a noc; kauci vracíme po předání objektu."
+    ]
+  },
+  "poptavka": {
+    "nadpis": "Nezávazná poptávka termínu",
+    "lead": "Vyplňte termín, počet osob a kontakt. Ověříme dostupnost a pošleme cenu — nic tím neplatíte.",
+    "body": [
+      { "ikona": "check", "text": "Píšete přímo majiteli penzionu, ne rezervačnímu portálu." },
+      { "ikona": "users", "text": "Objekt se pronajímá celý pro 12–17 osob; po dohodě i pro menší skupinu." },
+      { "ikona": "check", "text": "Minimální délka pobytu 2 noci; cena od 300 Kč za osobu a noc." },
+      { "ikona": "bath", "text": "4 apartmány, 7 ložnic, každý apartmán s vlastním WC a sprchovým koutem." },
+      { "ikona": "tv", "text": "Wi-Fi, chytrá televize, bluetooth reproduktor, fotbálek a šipky." },
+      { "ikona": "check", "text": "Vratná kauce 5 000 Kč, plyn a pobytový poplatek 15 Kč za osobu a noc se účtují zvlášť." }
+    ],
+    "formular_nadpis": "Poptávka termínu",
+    "dekujeme": "Ozveme se vám s potvrzením volného termínu a cenou. Poptávka je nezávazná."
+  },
+  "faq": {
+    "nadpis": "Časté dotazy",
+    "text": "Nenašli jste odpověď? Zavolejte: Petr 721 929 462, Dáša 732 789 550."
+  },
+  "cta": {
+    "nadpis": "Rezervujte si celý penzion",
+    "text": "Napište termín a počet osob — ověříme dostupnost a pošleme cenu včetně odhadu plynu a pobytového poplatku. Poptávka je nezávazná."
+  },
+  "paticka": {
+    "text": "Celý penzion pro 12–17 osob ve čtyřech samostatných apartmánech. Údolní 410 v Desné, 200 metrů od vlakové zastávky v srdci Jizerských hor.",
+    "informace": [
+      "Od 300 Kč / osoba / noc",
+      "Kapacita 12–17 osob, 7 ložnic",
+      "Parkování u domu, Wi-Fi",
+      "Nekuřácký objekt, bez mazlíčků"
+    ]
+  }
+}

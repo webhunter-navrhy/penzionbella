@@ -1,0 +1,75 @@
+[
+  {
+    "id": "apartman-1",
+    "nazev": "Apartmán č. 1",
+    "patro": "přízemí",
+    "luzka": 4,
+    "loznice": 2,
+    "kuchynka": true,
+    "balkon": false,
+    "vlastni_vchod": true,
+    "popis": "Apartmán v přízemí se dvěma ložnicemi a vlastní vybavenou kuchyňkou. Má vnitřní i samostatný vchod zvenku, takže můžete přicházet a odcházet nezávisle na zbytku domu.",
+    "dispozice": "manželská postel a dvě samostatná lůžka ve dvou ložnicích",
+    "vybaveni": "vybavená kuchyňka, lednice, WC a sprchový kout, vnitřní i samostatný vchod",
+    "vchod": "ano, vnitřní i zvenku",
+    "fotky": [
+      { "src": "images/ap1-loznice.webp", "m": "images/ap1-loznice-m.webp", "alt": "Apartmán č. 1 — ložnice s manželskou postelí a šatní skříní", "w": 1600, "h": 1200 },
+      { "src": "images/ap1-pokoj.webp", "m": "images/ap1-pokoj-m.webp", "alt": "Apartmán č. 1 — pokoj s jídelním stolem, samostatným lůžkem a manželskou postelí", "w": 1600, "h": 1200 },
+      { "src": "images/ap1-koupelna.jpg", "alt": "Apartmán č. 1 — sprchový kout a umyvadlo", "w": 900, "h": 1200, "koupelna": true }
+    ]
+  },
+  {
+    "id": "apartman-2",
+    "nazev": "Apartmán č. 2 s balkonem",
+    "patro": "1. patro",
+    "luzka": 3,
+    "loznice": 1,
+    "kuchynka": true,
+    "balkon": true,
+    "vlastni_vchod": true,
+    "popis": "Jediný apartmán s balkonem. Vlastní kuchyňka, ložnice pro tři a samostatné sociální zařízení; vchod je vnitřní i zvenku.",
+    "dispozice": "manželská postel a jedno lůžko v jedné ložnici",
+    "vybaveni": "kuchyňka, balkon, WC a sprchový kout, vnitřní i samostatný vchod",
+    "vchod": "ano, vnitřní i zvenku",
+    "fotky": [
+      { "src": "images/ap2-pokoj.webp", "m": "images/ap2-pokoj-m.webp", "alt": "Apartmán č. 2 — ložnice s manželskou postelí, samostatným lůžkem a televizí", "w": 1600, "h": 1206 },
+      { "src": "images/ap2-kuchyn.webp", "m": "images/ap2-kuchyn-m.webp", "alt": "Apartmán č. 2 — kuchyňka s lednicí a mikrovlnkou, dveře na balkon", "w": 1600, "h": 1200 }
+    ]
+  },
+  {
+    "id": "apartman-3",
+    "nazev": "Apartmán č. 3",
+    "patro": "1. patro",
+    "luzka": 4,
+    "loznice": 2,
+    "kuchynka": false,
+    "balkon": false,
+    "vlastni_vchod": false,
+    "popis": "Dvě oddělené ložnice v patře — jedna s manželskou postelí, druhá se dvěma samostatnými lůžky. V apartmánu je i posezení se sedací soupravou.",
+    "dispozice": "manželská postel a dvě samostatná lůžka ve dvou ložnicích",
+    "vybaveni": "dvě oddělené ložnice, sedací souprava, WC a sprchový kout",
+    "vchod": "ne, vstup z domu",
+    "fotky": [
+      { "src": "images/ap3-obyvak.webp", "m": "images/ap3-obyvak-m.webp", "alt": "Apartmán č. 3 — pokoj s manželskou postelí a sedací soupravou", "w": 1600, "h": 1200 },
+      { "src": "images/ap3-loznice.webp", "m": "images/ap3-loznice-m.webp", "alt": "Apartmán č. 3 — ložnice se dvěma samostatnými lůžky", "w": 1600, "h": 1200 }
+    ]
+  },
+  {
+    "id": "apartman-4",
+    "nazev": "Apartmán č. 4",
+    "patro": "1. patro",
+    "luzka": 6,
+    "loznice": 2,
+    "kuchynka": false,
+    "balkon": false,
+    "vlastni_vchod": false,
+    "popis": "Největší apartmán domu: dvě ložnice, v každé manželská postel a jedno samostatné lůžko. Celkem šest lůžek — vhodný pro dvě rodiny s dětmi.",
+    "dispozice": "dvě ložnice, v každé manželská postel a jedno lůžko",
+    "vybaveni": "dvě ložnice po třech lůžkách, WC a sprchový kout",
+    "vchod": "ne, vstup z domu",
+    "fotky": [
+      { "src": "images/ap4-pokoj-a.webp", "m": "images/ap4-pokoj-a-m.webp", "alt": "Apartmán č. 4 — ložnice s manželskou postelí, samostatným lůžkem a sedačkou", "w": 1600, "h": 1200 },
+      { "src": "images/ap4-pokoj-b.webp", "m": "images/ap4-pokoj-b-m.webp", "alt": "Apartmán č. 4 — druhá ložnice s manželskou postelí a lůžkem u okna", "w": 1600, "h": 1200 }
+    ]
+  }
+]

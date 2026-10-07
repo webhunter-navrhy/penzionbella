@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import galerie, poptavka_sekce, cta_sekce %}
+{% block main %}
+<main id="obsah">
+<section class="sekce sekce--tesna" aria-labelledby="ap-h"><div class="container">
+<nav class="drobky" aria-label="Cesta na webu" style="color:var(--text-3)"><a class="odkaz" href="{{ B }}">Úvod</a><span>/ <a class="odkaz" href="{{ B }}apartmany/">Apartmány</a></span><span aria-hidden="true">/ {{ a.nazev }}</span></nav>
+<div class="sekce-hlava" style="margin-top:var(--sp-4);margin-bottom:var(--sp-5)"><div><span class="badge badge--zlata">{{ a.patro }}</span><h1 id="ap-h" style="margin-top:var(--sp-3)">{{ a.nazev }}</h1><p>{{ a.popis|nb }}</p></div>
+<div class="akce-radek"><p class="cena"><b>od {{ C.od_ceny|kc }}</b><span>osoba / noc, v rámci celého objektu</span></p><a class="btn btn-cta" href="#poptavka">Poptat termín</a></div></div>
+{{ galerie(a.fotky, eager=4) }}</div></section>
+<section class="sekce sekce--plocha" aria-labelledby="param-h"><div class="container"><div class="duo" style="align-items:start"><div><h2 id="param-h">Parametry apartmánu</h2>
+<div class="tab-obal" style="margin-top:var(--sp-5)"><table class="tab"><tbody>
+<tr><th scope="row">Umístění</th><td>{{ a.patro }}</td></tr><tr><th scope="row">Lůžka</th><td class="cislo">{{ a.luzka }}</td></tr><tr><th scope="row">Ložnice</th><td class="cislo">{{ a.loznice }}</td></tr>
+{% if a.dispozice %}<tr><th scope="row">Dispozice</th><td>{{ a.dispozice }}</td></tr>{% endif %}{% if a.vybaveni %}<tr><th scope="row">Vybavení</th><td>{{ a.vybaveni }}</td></tr>{% endif %}
+<tr><th scope="row">Samostatný vchod</th><td>{{ a.vchod or ('ano' if a.vlastni_vchod else 'ne, vstup z domu') }}</td></tr><tr><th scope="row">Balkon</th><td>{{ 'ano' if a.balkon else 'ne' }}</td></tr>
+<tr><th scope="row">Cena</th><td class="cislo">od {{ C.od_ceny|kc }} / osoba / noc</td></tr></tbody></table></div></div>
+<div><ul class="karta-param" style="gap:var(--sp-4)">{% for p in a.param %}<li>{{ ic(p.ikona, 18) }} {{ p.text }}</li>{% endfor %}</ul>
+<ul class="seznam-odrazky" style="margin-top:var(--sp-6)">{% for b in T.apartmany.detail_body %}<li>{{ ic('check', 18) }}{{ b|nb }}</li>{% endfor %}</ul></div></div></div></section>
+{{ poptavka_sekce('Poptávka: ' ~ a.nazev, 'Napište termín a počet osob. Ověříme dostupnost celého objektu i to, jestli vám ' ~ a.nazev_maly ~ ' bude sedět, a ozveme se s cenou.', a.pobyt_volba, 'pf-' ~ a.id) }}
+{% if dalsi %}<section class="sekce sekce--plocha" aria-labelledby="dalsi-h"><div class="container"><div class="sekce-hlava"><div><h2 id="dalsi-h">Další apartmány v domě</h2></div><a class="odkaz" href="{{ B }}apartmany/">Všechny apartmány →</a></div>
+<div class="karty">{% for d in dalsi %}<article class="karta karta--ap"><div class="karta-telo"><span class="badge badge--zlata">{{ d.patro }}</span><h3><a href="{{ B }}apartmany/{{ d.id }}/">{{ d.nazev }}</a></h3>
+<ul class="karta-param">{% for p in d.param[:2] %}<li>{{ ic(p.ikona, 16) }} {{ p.text }}</li>{% endfor %}</ul>
+{% if d.nahledy %}<ul class="karta-nahledy" aria-label="Fotografie: {{ d.nazev }}">{% for f in d.nahledy %}<li><a href="{{ B }}apartmany/{{ d.id }}/" tabindex="-1" aria-hidden="true"><img src="{{ B }}{{ f.m or f.src }}" alt="" width="800" height="600" loading="lazy" decoding="async"></a></li>{% endfor %}</ul>{% endif %}
+<div class="karta-pata"><p class="cena"><b>od {{ C.od_ceny|kc }}</b><span>osoba / noc</span></p><a class="btn btn-obrys" href="{{ B }}apartmany/{{ d.id }}/">Detail</a></div></div></article>{% endfor %}</div></div></section>{% endif %}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, cenik_sekce, faq_sekce, poptavka_sekce, cta_sekce %}
+{% set P = T.cenik %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+{{ cenik_sekce() }}
+{{ faq_sekce() }}
+{{ poptavka_sekce(P.poptavka_nadpis, P.poptavka_lead, fid='pf-cenik') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

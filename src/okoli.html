@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, sekce_hlava, okoli_karty, kontakt_sekce, poptavka_sekce, cta_sekce %}
+{% set P = T.okoli %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+<section class="sekce" id="okoli" aria-labelledby="okoli-h"><div class="container">{{ sekce_hlava('okoli-h', P.nadpis, P.text) }}
+{{ okoli_karty() }}
+{% if O.den %}<h3 style="margin:var(--sp-8) 0 var(--sp-5);display:flex;align-items:center;gap:var(--sp-3)">{{ ic('mountain', 22, 'color:var(--zlato-tmava)') }} {{ P.den_nadpis }}</h3>
+<ul class="seznam-odrazky">{% for d in O.den %}<li>{{ ic('check', 18) }}<span><b>{{ d.nazev }}</b>{% if d.text %} — {{ d.text|nb }}{% endif %}</span></li>{% endfor %}</ul>{% endif %}
+</div></section>
+{{ kontakt_sekce() }}
+{{ poptavka_sekce(P.poptavka_nadpis, P.poptavka_lead, fid='pf-okoli') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

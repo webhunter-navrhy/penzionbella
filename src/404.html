@@ -1,0 +1,6 @@
+{% extends '_base.html' %}
+{% block main %}
+<main id="obsah" class="sekce container"><p class="stitek">Chyba 404</p><h1 style="margin-top:var(--sp-3)">Tuhle stránku jsme nenašli</h1>
+<p class="lead" style="margin-top:var(--sp-4)">Odkaz je nejspíš zastaralý nebo v adrese chybí písmeno. Zkuste některou z hlavních stránek, nebo nám rovnou zavolejte.</p>
+<div class="akce-radek" style="margin-top:var(--sp-6)"><a class="btn btn-cta" href="{{ B }}">Zpět na úvod</a><a class="btn btn-obrys" href="{{ B }}apartmany/">Apartmány</a><a class="btn btn-obrys" href="{{ B }}cenik/">Ceník</a>{% if S.tel %}<a class="btn btn-obrys" href="{{ S.tel[0].href }}">{{ S.tel[0].jmeno }} {{ S.tel[0].cislo }}</a>{% endif %}</div></main>
+{% endblock %}

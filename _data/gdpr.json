@@ -1,0 +1,57 @@
+{
+  "title": "Ochrana osobních údajů — Rodinný penzion Bella",
+  "description": "Jak Rodinný penzion Bella nakládá s osobními údaji z poptávkového formuláře, jaká máte práva a na koho se obrátit. Tento web neukládá cookies.",
+  "h1": "Ochrana osobních údajů",
+  "oddily": [
+    {
+      "nadpis": "Kdo je správcem vašich údajů",
+      "text": "Správcem osobních údajů je Petr Šilhán, provozovatel ubytovacího zařízení Rodinný penzion Bella, Údolní 410, 468 61 Desná.\nVe věcech ochrany osobních údajů nás kontaktujte na e-mailu petr.silhan@centrum.cz nebo telefonu 721 929 462.",
+      "body": []
+    },
+    {
+      "nadpis": "Jaké údaje zpracováváme a proč",
+      "text": "",
+      "body": [
+        "Jméno, telefon nebo e-mail, termín pobytu a počet osob z poptávkového formuláře — abychom vám mohli odpovědět a ověřit volný termín.",
+        "Údaje nutné pro potvrzení rezervace a vyúčtování pobytu — fakturační údaje, výše vratné kauce, odečet spotřeby plynu.",
+        "Údaje vyžadované zákonem o místních poplatcích a zákonem o pobytu cizinců — evidenční kniha ubytovaných hostů a podklad pro pobytový poplatek městu Desná."
+      ]
+    },
+    {
+      "nadpis": "Právní základ zpracování",
+      "text": "",
+      "body": [
+        "Jednání o smlouvě a její plnění (čl. 6 odst. 1 písm. b GDPR) — vyřízení poptávky a rezervace pobytu.",
+        "Splnění právní povinnosti (čl. 6 odst. 1 písm. c GDPR) — evidenční kniha ubytovaných, místní poplatky, účetní a daňové předpisy.",
+        "Oprávněný zájem (čl. 6 odst. 1 písm. f GDPR) — běžná komunikace s hosty a obrana právních nároků."
+      ]
+    },
+    {
+      "nadpis": "Jak dlouho údaje uchováváme",
+      "text": "Údaje z poptávky uchováváme po dobu jejího vyřizování a po dobu pobytu. Poté je uchováváme jen tak dlouho, jak vyžadují právní předpisy (evidenční kniha ubytovaných 6 let, účetní doklady 5 let, daňové doklady 10 let). Údaje, které už nepotřebujeme, mažeme.",
+      "body": []
+    },
+    {
+      "nadpis": "Komu údaje předáváme",
+      "text": "Údaje nepředáváme třetím stranám pro marketingové účely. Zpracovávat je mohou pouze dodavatelé nezbytní pro provoz penzionu (například účetní nebo správce webu, přes jehož server se poptávka z formuláře odesílá e-mailem) na základě zpracovatelské smlouvy, a orgány veřejné moci — zejména město Desná v souvislosti s pobytovým poplatkem a Policie ČR podle zákona o pobytu cizinců.",
+      "body": []
+    },
+    {
+      "nadpis": "Vaše práva",
+      "text": "",
+      "body": [
+        "Právo na přístup k údajům a jejich kopii.",
+        "Právo na opravu nepřesných a doplnění neúplných údajů.",
+        "Právo na výmaz („být zapomenut“), pokud pro další zpracování není zákonný důvod.",
+        "Právo na omezení zpracování a právo vznést námitku.",
+        "Právo na přenositelnost údajů.",
+        "Právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.gov.cz)."
+      ]
+    },
+    {
+      "nadpis": "Cookies a měření",
+      "text": "Tento web neukládá žádné cookies ani jiné identifikátory a nepoužívá analytické či marketingové nástroje třetích stran. Proto na něm není cookie lišta — není k čemu dávat souhlas. Mapa je statický obrázek vytvořený při stavbě webu z dat OpenStreetMap, písma jsou uložena přímo na webu.\nOdesláním poptávkového formuláře se vaše poptávka pošle e-mailem majiteli penzionu. Údaje z ní použijeme pouze k odpovědi na vaši poptávku.",
+      "body": []
+    }
+  ]
+}

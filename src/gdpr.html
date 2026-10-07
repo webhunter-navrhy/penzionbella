@@ -1,0 +1,7 @@
+{% extends '_base.html' %}
+{% block main %}
+<main id="obsah" class="sekce container"><div class="proza"><h1>{{ G.h1 }}</h1>
+{% for o in G.oddily %}<section><h2>{{ o.nadpis }}</h2>{% for p in o.text|odstavce %}<p>{{ p|nb }}</p>{% endfor %}{% if o.body %}<ul>{% for b in o.body %}<li>{{ b|nb }}</li>{% endfor %}</ul>{% endif %}</section>{% endfor %}
+<p style="margin-top:var(--sp-9)">{% for t in S.tel %}{{ t.jmeno }} <a class="odkaz" href="{{ t.href }}">{{ t.cislo }}</a> · {% endfor %}<a class="odkaz" href="mailto:{{ SITE.email }}">{{ SITE.email }}</a></p>
+<p style="margin-top:var(--sp-5)"><a class="odkaz" href="{{ B }}">← Zpět na úvod</a></p></div></main>
+{% endblock %}

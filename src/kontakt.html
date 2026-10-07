@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, kontakt_sekce, poptavka_sekce, faq_sekce, cta_sekce %}
+{% set P = T.kontakt %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+{{ kontakt_sekce() }}
+{{ poptavka_sekce(P.poptavka_nadpis, P.poptavka_lead, fid='pf-kontakt') }}
+{{ faq_sekce() }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

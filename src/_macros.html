@@ -1,0 +1,132 @@
+{#- Sdílené kousky stránek. Ikony: ic(název, velikost, styl) – SVG z src/icons.json (lucide) -#}
+
+{% macro logo() -%}
+<svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 15.5 L16 4 L28 15.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.5 14.5 V27 h19 V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 27 v-7.5 a3 3 0 0 1 6 0 V27" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 20.5 a2.5 2.5 0 0 1 5 0 v3 h-5 z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path></svg>
+{%- endmacro %}
+
+{% macro tel_btn(t, cls='btn btn-obrys', size=18) -%}
+<a class="{{ cls }}" href="{{ t.href }}">{{ ic('phone', size) }} {{ t.jmeno }} {{ t.cislo }}</a>
+{%- endmacro %}
+
+{% macro tel_btns(cls='btn btn-obrys', size=18) -%}
+{% for t in S.tel %}{{ tel_btn(t, cls, size) }}{% endfor %}
+{%- endmacro %}
+
+{#- karta apartmánu (úvod, seznam apartmánů) -#}
+{% macro ap_karta(a, eager=false) -%}
+<article class="karta karta--ap"><div class="karta-telo"><span class="badge badge--zlata">{{ a.patro }}</span><h3><a href="{{ B }}apartmany/{{ a.id }}/">{{ a.nazev }}</a></h3>
+<ul class="karta-param">{% for p in a.param %}<li>{{ ic(p.ikona, 16) }} {{ p.text }}</li>{% endfor %}</ul>
+<p>{{ a.popis|nb }}</p>
+<div class="karta-nahledy-obal">{% if a.nahledy %}<ul class="karta-nahledy" aria-label="Fotografie: {{ a.nazev }}">{% for f in a.nahledy %}<li><a href="{{ B }}apartmany/{{ a.id }}/" tabindex="-1" aria-hidden="true"><img src="{{ B }}{{ f.m or f.src }}" alt="" width="800" height="600" loading="{{ 'eager' if eager else 'lazy' }}" decoding="async"></a></li>{% endfor %}</ul>{% endif %}<a class="odkaz karta-vsechny" href="{{ B }}apartmany/{{ a.id }}/">Fotky a detail ({{ a.fotky|length }}) →</a></div>
+<div class="karta-pata"><p class="cena"><b>od {{ C.od_ceny|kc }}</b><span>osoba / noc, v rámci celého objektu</span></p><div class="akce-radek"><a class="btn btn-obrys" href="{{ B }}apartmany/{{ a.id }}/">Detail</a><a class="btn btn-cta" href="{{ B }}rezervace/">Poptat termín</a></div></div></div></article>
+{%- endmacro %}
+
+{#- mřížka fotek s lightboxem (web.js) -#}
+{% macro galerie(fotky, velka_prvni=false, eager=4) -%}
+<div class="gal-grid{% if fotky|length == 3 %} gal-grid--3{% elif fotky|length == 2 %} gal-grid--2{% endif %}" data-galerie>{% for f in fotky %}<button type="button"{% if velka_prvni and loop.first %} class="gal-velka"{% endif %} aria-label="Zvětšit fotografii: {{ f.alt }}"><img src="{{ B }}{{ f.src }}" alt="{{ f.alt }}" width="{{ f.w or 1280 }}" height="{{ f.h or 853 }}" loading="{{ 'eager' if loop.index0 < eager else 'lazy' }}" decoding="async"></button>{% endfor %}</div>
+{%- endmacro %}
+
+{% macro pod_hero(p, drobky) -%}
+<section class="pod-hero" aria-labelledby="pod-hero-h"><div class="pod-hero-media" style="--pos:{{ p.pos or '50% 50%' }}"><img src="{{ B }}{{ p.foto }}" alt="{{ p.foto_alt }}" width="{{ p.foto_w }}" height="{{ p.foto_h }}" fetchpriority="high" decoding="async"><div class="hero-stin"></div></div>
+<div class="pod-hero-obsah"><div class="container"><nav class="drobky" aria-label="Cesta na webu"><a href="{{ B }}">Úvod</a><span aria-hidden="true">/ {{ drobky }}</span></nav><h1 id="pod-hero-h">{{ p.h1 }}</h1><p>{{ p.perex|nb }}</p></div></div></section>
+{%- endmacro %}
+
+{% macro sekce_hlava(id, nadpis, text, odkaz=None, odkaz_text='') -%}
+<div class="sekce-hlava"><div><h2 id="{{ id }}">{{ nadpis }}</h2>{% if text %}<p>{{ text|nb }}</p>{% endif %}</div>{% if odkaz %}<a class="odkaz" href="{{ odkaz }}">{{ odkaz_text }}</a>{% endif %}</div>
+{%- endmacro %}
+
+{#- ceník: dvě tabulky + podmínky + volné termíny (úvod, ceník) -#}
+{% macro cenik_sekce() -%}
+<section class="sekce" id="cenik" aria-labelledby="cenik-h"><div class="container">
+<div class="sekce-hlava"><div><h2 id="cenik-h">{{ C.nadpis }}</h2><p>{{ C.uvod|nb }}</p></div><a class="btn btn-cta" href="{{ B }}rezervace/">Poptat termín</a></div>
+<div class="duo" style="align-items:start">
+<div class="tab-obal"><table class="tab"><caption>{{ C.delka_nadpis }}</caption><thead><tr><th scope="col">Délka pobytu</th><th scope="col" class="cislo">Cena</th></tr></thead><tbody>{% for r in C.delka %}<tr><th scope="row">{{ r.noci }}</th><td class="cislo"><b>{{ r.cena|kc }}</b></td></tr>{% endfor %}{% if C.min_pobyt %}<tr><th scope="row">Minimální délka pobytu</th><td class="cislo">{{ C.min_pobyt }}</td></tr>{% endif %}</tbody></table></div>
+<div class="tab-obal"><table class="tab"><caption>{{ C.sezony_nadpis }}</caption><tbody>{% for r in C.sezony %}<tr><th scope="row">{{ r.nazev }}{% if r.stitek %} <span class="badge badge--obsazeno">{{ r.stitek }}</span>{% endif %}{% if r.pozn %}<br><span class="pozn">{{ r.pozn|nb }}</span>{% endif %}</th><td class="cislo"><b>{{ r.cena|kc }}</b></td></tr>{% endfor %}</tbody></table></div>
+</div>
+<div class="duo" style="margin-top:var(--sp-8);align-items:start">
+<div><h3>{{ C.podminky_nadpis }}</h3><ul class="seznam-odrazky" style="margin-top:var(--sp-4)">{% for p in C.podminky %}<li>{{ ic('check', 18) }}{{ p|nb }}</li>{% endfor %}</ul>{% if C.poznamka %}<p class="pozn" style="margin-top:var(--sp-5)">{{ C.poznamka|nb }}</p>{% endif %}</div>
+{% if C.volne.zobrazit and C.volne.terminy %}<div><h3>{{ C.volne.nadpis }}</h3>{% if C.volne.text %}<p class="muted" style="margin-top:var(--sp-3)">{{ C.volne.text|nb }}</p>{% endif %}
+<div class="tab-obal" style="margin-top:var(--sp-4)"><table class="tab"><caption>{{ C.volne.tabulka_nadpis }}</caption><thead><tr><th scope="col">Termín</th><th scope="col" class="cislo">Cena</th></tr></thead><tbody>{% for r in C.volne.terminy %}<tr><th scope="row">{{ r.termin }}</th><td class="cislo"><b>{{ r.cena|kc }}</b></td></tr>{% endfor %}</tbody></table></div>
+<div class="akce-radek" style="margin-top:var(--sp-5)"><a class="btn btn-cta" href="{{ B }}rezervace/">{{ C.volne.tlacitko or 'Poptat termín' }}</a>{{ tel_btns() }}</div></div>{% else %}<div></div>{% endif %}
+</div></div></section>
+{%- endmacro %}
+
+{% macro faq_sekce() -%}
+<section class="sekce sekce--plocha" id="faq" aria-labelledby="faq-h"><div class="container">{{ sekce_hlava('faq-h', T.faq.nadpis, T.faq.text) }}
+<div class="faq">{% for f in FAQ %}<details><summary>{{ f.q }}</summary><div class="faq-telo">{% for p in f.a|odstavce %}<p>{{ p|nb }}</p>{% endfor %}</div></details>{% endfor %}</div></div></section>
+{%- endmacro %}
+
+{% macro kontakt_sekce() -%}
+{% set K = T.kontakt %}
+<section class="sekce" id="kontakt" aria-labelledby="kontakt-h"><div class="container"><div class="kontakt-grid"><div>
+<h2 id="kontakt-h">{{ K.nadpis }}</h2><p class="muted" style="margin-top:var(--sp-4)">{{ K.uvod|nb }}</p>
+<ul class="kontakt-radky">
+<li>{{ ic('map-pin', 20, 'color:var(--zlato-tmava);margin-top:3px') }}<span><b>{{ SITE.ulice }}</b>{{ SITE.psc }} {{ SITE.obec }}<br><span class="pozn">GPS {{ '%.5f'|format(SITE.gps.lat) }}, {{ '%.5f'|format(SITE.gps.lon) }}</span></span></li>
+<li>{{ ic('phone', 20, 'color:var(--zlato-tmava);margin-top:3px') }}<span>{% for t in S.tel %}{{ t.jmeno }} <a href="{{ t.href }}">{{ t.cislo }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</span></li>
+<li>{{ ic('mail', 20, 'color:var(--zlato-tmava);margin-top:3px') }}<span><a href="mailto:{{ SITE.email }}">{{ SITE.email }}</a>{% if K.email_pozn %}<br><span class="pozn">{{ K.email_pozn }}</span>{% endif %}</span></li>
+{% for p in K.prijezd %}<li>{{ ic(p.ikona, 20, 'color:var(--zlato-tmava);margin-top:3px') }}<span><b>{{ p.nadpis }}</b><span class="muted">{{ p.text|nb }}</span></span></li>{% endfor %}
+</ul>
+<div class="akce-radek" style="margin-top:var(--sp-6)">{{ tel_btns('btn btn-cta') }}<a class="btn btn-obrys" href="{{ SITE.mapy_url }}" target="_blank" rel="noopener">{{ ic('navigation', 18) }} Otevřít v Mapy.com</a></div></div>
+<div class="mapa-ram"><div class="mapa-plocha"><img src="{{ B }}images/mapa-desna.jpg" alt="Mapa Desné s vyznačenou polohou penzionu Bella v ulici Údolní" width="1400" height="900" loading="lazy" decoding="async"><span class="mapa-znacka">{{ ic('map-pin', 34, '', fill='#fff', sw='2.4') }}<span>{{ SITE.kratky }}</span></span></div>
+<div class="mapa-pata"><span>{{ ic('map', 16, 'display:inline;vertical-align:-3px;color:var(--zlato-tmava)') }} Mapová data © přispěvatelé OpenStreetMap (ODbL), vykresleno staticky</span><a class="odkaz" href="{{ SITE.mapy_url }}" target="_blank" rel="noopener">Navigovat →</a></div></div>
+</div></div></section>
+{%- endmacro %}
+
+{#- formulář poptávky; web.js ho odešle na backend webhunter-admin (e-mail majiteli) -#}
+{% macro formular(fid, vybrano=None) -%}
+<form class="formular" novalidate aria-labelledby="{{ fid }}-h" data-poptavka data-dekujeme="{{ T.poptavka.dekujeme }}">
+<h3 id="{{ fid }}-h">{{ T.poptavka.formular_nadpis }}</h3>
+<div class="radek radek-3">
+<div class="pole"><label for="{{ fid }}-prijezd">Příjezd</label><input id="{{ fid }}-prijezd" name="prijezd" type="date" aria-invalid="false"></div>
+<div class="pole"><label for="{{ fid }}-odjezd">Odjezd</label><input id="{{ fid }}-odjezd" name="odjezd" type="date" aria-invalid="false"></div>
+<div class="pole"><label for="{{ fid }}-osob">Počet osob</label><input id="{{ fid }}-osob" name="osob" type="number" inputmode="numeric" min="1" max="{{ SITE.kapacita.max }}" placeholder="{{ SITE.kapacita.min }}" aria-invalid="false"></div>
+</div>
+<div class="pole"><label for="{{ fid }}-pobyt">Co vás zajímá</label><select id="{{ fid }}-pobyt" name="pobyt">{% for o in S.pobyt_volby %}<option value="{{ o.v }}"{% if (vybrano and o.v == vybrano) or (not vybrano and loop.first) %} selected{% endif %}>{{ o.t }}</option>{% endfor %}</select></div>
+<div class="pole"><label for="{{ fid }}-jmeno">Jméno a příjmení</label><input id="{{ fid }}-jmeno" name="jmeno" autocomplete="name" placeholder="Jan Novák" aria-invalid="false"></div>
+<div class="radek">
+<div class="pole"><label for="{{ fid }}-tel">Telefon <small>nebo e-mail</small></label><input id="{{ fid }}-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="777 123 456" aria-invalid="false"></div>
+<div class="pole"><label for="{{ fid }}-email">E-mail <small>nebo telefon</small></label><input id="{{ fid }}-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="jmeno@email.cz" aria-invalid="false"></div>
+</div>
+<div class="pole"><label for="{{ fid }}-pozn">Poznámka <small>nepovinné</small></label><textarea id="{{ fid }}-pozn" name="poznamka" rows="3" placeholder="Např. jedeme se třemi rodinami, potřebujeme dětskou postýlku, měli bychom zájem o výčepní zařízení…"></textarea></div>
+<input class="past" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn btn-cta btn-blok btn-lg" type="submit">{{ ic('send', 18) }} <span>Odeslat nezávaznou poptávku</span></button>
+<ul class="duvera"><li>{{ ic('check', 16) }}Poptávka je nezávazná — nic tím neplatíte</li><li>{{ ic('check', 16) }}Píšete přímo majiteli, ne rezervačnímu portálu</li></ul>
+<p class="pozn">Údaje použijeme jen k odpovědi na poptávku. <a class="odkaz" href="{{ B }}gdpr/">Jak s nimi nakládáme</a>.</p>
+</form>
+{%- endmacro %}
+
+{% macro poptavka_sekce(nadpis=None, lead=None, vybrano=None, fid='pf') -%}
+<section class="sekce" id="poptavka" aria-labelledby="poptavka-h"><div class="container"><div class="kontakt-grid"><div>
+<h2 id="poptavka-h">{{ nadpis or T.poptavka.nadpis }}</h2><p class="lead" style="margin-top:var(--sp-4)">{{ (lead or T.poptavka.lead)|nb }}</p>
+<ul class="seznam-odrazky" style="margin-top:var(--sp-6)">{% for b in T.poptavka.body %}<li>{{ ic(b.ikona, 18) }}{{ b.text|nb }}</li>{% endfor %}</ul>
+<p class="pozn" style="margin-top:var(--sp-5)">Nebo zavolejte přímo: {% for t in S.tel %}{{ t.jmeno }} <a class="odkaz" href="{{ t.href }}">{{ t.cislo }}</a>{% if not loop.last %}, {% endif %}{% endfor %} · <a class="odkaz" href="mailto:{{ SITE.email }}">{{ SITE.email }}</a></p>
+{% if SITE.echalupy_terminy %}<p class="pozn" style="margin-top:var(--sp-3)">Volné termíny má majitel zveřejněné také v kalendáři na <a class="odkaz" href="{{ SITE.echalupy_terminy }}" target="_blank" rel="noopener">e-chalupy.cz</a>.</p>{% endif %}
+</div>{{ formular(fid, vybrano) }}</div></div></section>
+{%- endmacro %}
+
+{% macro cta_sekce() -%}
+<section class="cta-blok sekce sekce--tesna" aria-labelledby="cta-h"><div class="container cta-in"><div><h2 id="cta-h">{{ T.cta.nadpis }}</h2><p>{{ T.cta.text|nb }}</p></div>
+<div class="akce-radek"><a class="btn btn-cta btn-lg" href="{{ B }}rezervace/">Poptat termín</a>{{ tel_btns('btn btn-obrys btn-lg') }}</div></div></section>
+{%- endmacro %}
+
+{% macro hvezdy(r) -%}
+{% set plne = (r + 0.0001)|round|int %}<p class="hvezdy" aria-label="Hodnocení {{ r|des1 }} z 5"><span aria-hidden="true">{{ '★' * plne }}<span style="color:var(--line-2)">{{ '★' * (5 - plne) }}</span></span> <span class="pozn" style="letter-spacing:0">{{ r|des1 }} z 5</span></p>
+{%- endmacro %}
+
+{% macro rec_karta(r) -%}
+<div class="rec-karta">{{ ic('quote', 22, 'color:var(--zlato)') }}{{ hvezdy(r.hodnoceni) }}<blockquote>„{{ r.text|nb }}“</blockquote>{% if r.odpoved %}<div class="rec-odpoved"><b>Odpověď majitele</b>„{{ r.odpoved|nb }}“</div>{% endif %}<footer><b>{{ r.jmeno }}</b>{{ r.skupina }}{% if r.datum %}, {{ r.datum }}{% endif %}</footer></div>
+{%- endmacro %}
+
+{% macro rec_souhrn() -%}
+<div class="rec-souhrn"><p class="znamka">{{ R.prumer|des1 }}</p><div><p class="hvezdy" aria-hidden="true">★★★★★</p><p><b>{{ R.prumer|des1 }} z 5 · {{ R.pocet }} hodnocení na {{ R.zdroj }}</b> · {{ R.doporucuje }} % hostů penzion doporučuje</p></div>
+{% if R.kategorie %}<p class="pozn" style="max-width:34ch">Hodnoceno v kategoriích {{ R.kategorie }}.</p>{% endif %}
+{% if R.url %}<p style="margin-left:auto"><a class="odkaz" href="{{ R.url }}" target="_blank" rel="noopener">Zobrazit na {{ R.zdroj }}</a></p>{% endif %}</div>
+{%- endmacro %}
+
+{#- okolí: zima + léto (úvod i stránka Okolí) -#}
+{% macro okoli_karty() -%}
+{% if O.zima %}<h3 style="margin-bottom:var(--sp-5);display:flex;align-items:center;gap:var(--sp-3)">{{ ic('snowflake', 22, 'color:var(--zlato-tmava)') }} {{ T.okoli.zima_nadpis }}</h3>
+<div class="karty karty--par">{% for z in O.zima %}<article class="karta"><div class="karta-telo"><span class="usp-ikona">{{ ic(z.ikona, 20) }}</span><h3 style="font-size:19px">{{ z.nadpis }}</h3><p>{{ z.text|nb }}</p>{% if z.stitek %}<p class="karta-param" style="margin-top:auto"><span class="badge badge--zlata">{{ z.stitek }}</span></p>{% endif %}</div></article>{% endfor %}</div>{% endif %}
+{% if O.leto %}<h3 style="margin:var(--sp-8) 0 var(--sp-5);display:flex;align-items:center;gap:var(--sp-3)">{{ ic('sun', 22, 'color:var(--zlato-tmava)') }} {{ T.okoli.leto_nadpis }}</h3>
+<div class="karty karty--ctyri">{% for l in O.leto %}<article class="karta">{% if l.foto and l.foto.src %}<div class="karta-foto"><img src="{{ B }}{{ l.foto.src }}" alt="{{ l.foto.alt }}" width="{{ l.foto.w or 1280 }}" height="{{ l.foto.h or 576 }}" loading="{{ 'eager' if loop.index0 < 3 else 'lazy' }}" decoding="async">{% if l.stitek %}<span class="badge">{{ l.stitek }}</span>{% endif %}</div>{% endif %}<div class="karta-telo"><h3 style="font-size:19px">{{ l.nadpis }}</h3><p>{{ l.text|nb }}</p></div></article>{% endfor %}</div>{% endif %}
+{%- endmacro %}

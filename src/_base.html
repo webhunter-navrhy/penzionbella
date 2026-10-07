@@ -1,0 +1,52 @@
+{%- from '_macros.html' import logo, tel_btn -%}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if not SITE.indexovat %}<meta name="robots" content="noindex, nofollow">
+{% endif %}<link rel="canonical" href="{{ SITE.domena }}/{{ page.path }}">
+<meta property="og:title" content="{{ page.og_title or T.uvod.title }}">
+<meta property="og:description" content="{{ page.og_description or T.uvod.og_description }}">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ SITE.domena }}/{{ page.path }}">
+<meta property="og:image" content="{{ SITE.domena }}/{{ SITE.og_foto }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2b1f1a">
+<meta name="geo.region" content="CZ-51">
+<meta name="geo.placename" content="{{ SITE.obec }}">
+<meta name="geo.position" content="{{ SITE.gps.lat }};{{ SITE.gps.lon }}">
+<meta name="ICBM" content="{{ SITE.gps.lat }}, {{ SITE.gps.lon }}">
+<link rel="icon" href="{{ B }}icon.svg?v={{ V.icon }}" type="image/svg+xml" sizes="any">
+<link rel="preload" href="{{ B }}assets/fonts/98848575513c9742-s.p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ B }}assets/fonts/cc978ac5ee68c2b6-s.p.woff2" as="font" type="font/woff2" crossorigin>
+{% for p in page.preload or [] %}<link rel="preload" href="{{ B }}{{ p }}" as="image">
+{% endfor %}<link rel="stylesheet" href="{{ B }}assets/css/web.css?v={{ V.css }}">
+<script type="application/ld+json">{{ page.jsonld|safe }}</script>
+</head>
+<body class="__variable_016b11 __variable_a7db30">
+<a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+<header class="hlavicka"><div class="container hl-in">
+<a class="hl-logo" href="{{ B }}" aria-label="{{ SITE.nazev }} — úvodní stránka">{{ logo() }}<span>{{ SITE.kratky }}<small>{{ SITE.podtitul }}</small></span></a>
+<nav class="hl-nav" aria-label="Hlavní navigace">{% for n in S.nav %}<a href="{{ B }}{{ n.href }}"{% if page.aktivni == n.href %} aria-current="page"{% endif %}>{{ n.t }}</a>{% endfor %}</nav>
+<div class="hl-akce">{% if S.tel %}{% set t = S.tel[0] %}<a class="hl-tel" href="{{ t.href }}" aria-label="Zavolat: {{ t.jmeno }} {{ t.cislo }}">{{ ic('phone', 18, sw='2.2') }}<span>{{ t.jmeno }} {{ t.cislo }}</span></a>{% endif %}<a class="btn btn-cta" href="{{ B }}rezervace/">Poptat termín</a><button class="hamburger" type="button" aria-expanded="false" aria-controls="mobil-menu" aria-label="Otevřít menu">{{ ic('menu', 22) }}</button></div></div>
+<div class="mobil-menu" id="mobil-menu" data-open="false"><nav aria-label="Mobilní navigace"><a href="{{ B }}">Úvod</a>{% for n in S.nav %}<a href="{{ B }}{{ n.href }}">{{ n.t }}</a>{% endfor %}<div class="mm-akce">{% for t in S.tel %}<a class="btn btn-obrys" href="{{ t.href }}">{{ t.jmeno }} {{ t.cislo }}</a>{% endfor %}<a class="btn btn-cta" href="{{ B }}rezervace/">Poptat termín</a></div></nav></div>
+</header>
+{% block main %}{% endblock %}
+<footer class="paticka"><div class="container"><div class="pat-grid">
+<div><p class="pat-logo">{{ logo() }}<b>{{ SITE.nazev }}</b></p><p style="font-size:15px">{{ T.paticka.text|nb }}</p>
+<p style="margin-top:var(--sp-4)">{% for t in S.tel %}<a class="pat-tel" href="{{ t.href }}">{{ ic('phone', 20) }}{{ t.jmeno }} {{ t.cislo }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</p></div>
+<div><h3>Kontakt</h3><ul><li>{{ SITE.ulice }}<br>{{ SITE.psc }} {{ SITE.obec }}</li><li><a href="mailto:{{ SITE.email }}">{{ SITE.email }}</a></li>{% for t in S.tel %}<li>{{ t.jmeno }} <a href="{{ t.href }}">{{ t.cislo }}</a></li>{% endfor %}<li>{{ SITE.majitel }}, majitel</li></ul></div>
+<div><h3>Ubytování</h3><ul><li><a href="{{ B }}apartmany/">{{ S.pocet_ap_slovem|capitalize }} apartmány</a></li><li><a href="{{ B }}cenik/">Ceník a podmínky</a></li><li><a href="{{ B }}galerie/">Galerie</a></li><li><a href="{{ B }}okoli/">Okolí a výlety</a></li><li><a href="{{ B }}recenze/">Recenze hostů</a></li><li><a href="{{ B }}rezervace/">Poptávka termínu</a></li></ul></div>
+<div><h3>Informace</h3><ul>{% for i in T.paticka.informace %}<li>{{ i }}</li>{% endfor %}<li><a href="{{ B }}kontakt/">Kontakt a příjezd</a></li><li><a href="{{ B }}gdpr/">Ochrana osobních údajů</a></li></ul></div>
+</div>
+<div class="pat-tiraz"><span>Provozovatel {{ SITE.majitel }}, {{ SITE.ulice }}, {{ SITE.psc }} {{ SITE.obec }}</span><span>Hodnocení {{ R.prumer|des1 }} z 5 od {{ R.pocet }} hostů na {{ R.zdroj }}</span><span>© {{ S.rok }} {{ SITE.nazev }}</span></div>
+</div></footer>
+<div class="mobil-lista">{% if S.tel %}<a class="btn btn-obrys" href="{{ S.tel[0].href }}">{{ ic('phone', 18) }} Zavolat</a>{% endif %}<a class="btn btn-cta" href="{{ B }}rezervace/">{{ ic('calendar-check', 18) }} Rezervovat</a></div>
+<script>window.BELLA={api:"https://webhunter-admin.webhunter.workers.dev/api/penzionbella/form",base:"{{ B }}",max:{{ SITE.kapacita.max }},email:"{{ SITE.email }}",tel:{{ S.tel_json|safe }}};</script>
+<script src="{{ B }}assets/js/web.js?v={{ V.js }}" defer></script>
+</body>
+</html>

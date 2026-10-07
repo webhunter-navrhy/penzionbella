@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, galerie, sekce_hlava, poptavka_sekce, cta_sekce %}
+{% set P = T.galerie %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+<section class="sekce" aria-labelledby="gal-dum-h"><div class="container">{{ sekce_hlava('gal-dum-h', P.dum_nadpis, P.dum_text) }}{{ galerie(S.galerie_dum, velka_prvni=true) }}</div></section>
+{% if F.okoli %}<section class="sekce sekce--plocha" aria-labelledby="gal-okoli-h"><div class="container">{{ sekce_hlava('gal-okoli-h', P.okoli_nadpis, P.okoli_text) }}{{ galerie(F.okoli) }}</div></section>{% endif %}
+{{ poptavka_sekce(P.poptavka_nadpis, P.poptavka_lead, fid='pf-gal') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

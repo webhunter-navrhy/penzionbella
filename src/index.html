@@ -1,0 +1,59 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import ap_karta, galerie, sekce_hlava, cenik_sekce, faq_sekce, kontakt_sekce, poptavka_sekce, cta_sekce, rec_karta, rec_souhrn, okoli_karty, tel_btns %}
+{% set U = T.uvod %}
+{% block main %}
+<main id="obsah">
+<section class="hero" aria-label="{{ SITE.nazev }} v {{ SITE.obec_lokal }}"><div class="hero-media">
+<div class="hero-fotky">{% for f in F.hero %}<picture>{% if f.m %}<source media="(max-width: 780px)" srcset="{{ B }}{{ f.m }}">{% endif %}<img src="{{ B }}{{ f.src }}" alt="{{ f.alt if loop.first else '' }}"{% if not loop.first %} aria-hidden="true"{% endif %} width="{{ f.w or 1920 }}" height="{{ f.h or 1080 }}" data-aktivni="{{ 'true' if loop.first else 'false' }}" style="object-position:{{ f.pos or '50% 50%' }}" decoding="async" loading="{{ 'eager' if loop.first else 'lazy' }}"{% if loop.first %} fetchpriority="high"{% endif %}></picture>{% endfor %}<div class="hero-stin"></div></div>
+<div class="hero-obsah"><div class="container"><ul class="hero-znacky">{% for z in U.znacky %}<li>{{ ic(z.ikona, 15) }} {{ z.text }}</li>{% endfor %}</ul><h1>{{ U.h1 }}</h1><p>{{ U.perex|nb }}{% if U.perex_detail %}<span class="hero-detail"> {{ U.perex_detail|nb }}</span>{% endif %}</p></div></div>
+{% if F.hero|length > 1 %}<div class="hero-tecky" role="tablist" aria-label="Fotografie penzionu">{% for f in F.hero %}<button type="button" role="tab" aria-current="{{ 'true' if loop.first else 'false' }}" aria-label="Fotografie {{ loop.index }} z {{ loop.length }}"></button>{% endfor %}</div>{% endif %}
+</div></section>
+
+<div class="rezervace-obal"><div class="container">
+<form class="rezervace-lista" aria-label="Ověření dostupnosti termínu" data-lista>
+<div><label for="rl-p">Příjezd</label><input id="rl-p" type="date" required></div>
+<div><label for="rl-o">Odjezd</label><input id="rl-o" type="date" required></div>
+<div><label for="rl-h">Hosté</label><select id="rl-h">{% for n in range(1, SITE.kapacita.max + 1) %}<option value="{{ n }}"{% if n == SITE.kapacita.min %} selected{% endif %}>{{ n }} {{ n|osob }}</option>{% endfor %}</select></div>
+<div class="rl-akce"><button class="btn btn-cta" type="submit">{{ ic('calendar-check', 18) }} Ověřit dostupnost</button></div>
+</form>
+<div class="rezervace-pod"><span class="hodnoceni"><span class="hvezdy" aria-hidden="true">★★★★★</span><b>{{ R.prumer|des1 }} z 5</b><span>· {{ R.pocet }} hodnocení na {{ R.zdroj }} · {{ R.doporucuje }} % hostů doporučuje</span></span><span>Od <b>{{ C.od_ceny|kc }}</b> za osobu a noc {{ C.od_ceny_pozn }}</span><span>{{ ic('shield-check', 15, 'display:inline;vertical-align:-2px;color:var(--zelena)') }} {{ U.lista_poznamka }}</span>{% for t in S.tel %}<a class="odkaz" href="{{ t.href }}">{{ ic('phone', 14, 'display:inline;vertical-align:-2px') }} {{ t.jmeno }} {{ t.cislo }}</a>{% endfor %}</div>
+</div></div>
+
+<section class="sekce sekce--tesna sekce--plocha" aria-label="Co penzion nabízí"><div class="container"><ul class="usp">{% for u in U.usp %}<li class="usp-i"><span class="usp-ikona">{{ ic(u.ikona, 22) }}</span><span><b>{{ u.nadpis }}</b><span>{{ u.text }}</span></span></li>{% endfor %}</ul></div></section>
+
+<section class="sekce" aria-labelledby="o-nas-h"><div class="container"><div class="duo">
+<div class="reveal" data-videt="true"><h2 id="o-nas-h">{{ U.onas_nadpis }}</h2><p class="lead" style="margin-top:var(--sp-4)">{{ U.onas_lead|nb }}</p>
+<ul class="duo-body">{% for b in U.onas_body %}<li>{{ ic('check', 18) }}{{ b|nb }}</li>{% endfor %}</ul>
+<div class="akce-radek" style="margin-top:var(--sp-6)"><a class="btn btn-cta" href="{{ B }}apartmany/">Prohlédnout apartmány</a>{{ tel_btns() }}</div></div>
+<div class="reveal kolaz" data-videt="true">{% for f in F.kolaz %}<figure><img src="{{ B }}{{ f.src }}" alt="{{ f.alt }}" width="{{ f.w or 1280 }}" height="{{ f.h or 960 }}" loading="lazy" decoding="async">{% if f.popisek %}<figcaption>{{ f.popisek }}</figcaption>{% endif %}</figure>{% endfor %}</div>
+</div>
+<ul class="cisla" style="margin-top:var(--sp-8)">{% for c in U.cisla %}<li><b>{{ c.cislo }}</b><span>{{ c.popis }}</span></li>{% endfor %}</ul></div></section>
+
+<section class="sekce sekce--plocha" id="apartmany" aria-labelledby="apartmany-h"><div class="container">
+{{ sekce_hlava('apartmany-h', U.apartmany_nadpis, U.apartmany_text, B ~ 'apartmany/', 'Všechny apartmány a dispozice →') }}
+<div class="karty karty--ap">{% for a in AP %}{{ ap_karta(a, loop.first) }}{% endfor %}</div></div></section>
+
+<section class="sekce" aria-labelledby="vybaveni-h"><div class="container">{{ sekce_hlava('vybaveni-h', T.vybaveni.nadpis, T.vybaveni.text) }}
+<div class="vyb-grid">{% for v in T.vybaveni.polozky %}<div class="vyb-i"><span class="usp-ikona">{{ ic(v.ikona, 22) }}</span><div><h3>{{ v.nadpis }}</h3><p>{{ v.text|nb }}</p></div></div>{% endfor %}</div></div></section>
+
+<section class="sekce sekce--plocha" aria-labelledby="galerie-h"><div class="container">
+{{ sekce_hlava('galerie-h', U.galerie_nadpis, U.galerie_text, B ~ 'galerie/', 'Všechny fotky (' ~ S.galerie_dum|length ~ ') →') }}
+{{ galerie(F.spolecne[:8]) }}</div></section>
+
+<section class="sekce" id="okoli" aria-labelledby="okoli-h"><div class="container">
+{{ sekce_hlava('okoli-h', T.okoli.nadpis, T.okoli.text, B ~ 'okoli/', 'Tipy na výlety →') }}
+{{ okoli_karty() }}</div></section>
+
+<section class="sekce sekce--plocha" id="recenze" aria-labelledby="recenze-h"><div class="container">
+{{ sekce_hlava('recenze-h', U.recenze_nadpis, U.recenze_text) }}
+{{ rec_souhrn() }}
+<div class="karty karty--2">{% for r in S.recenze_uvod %}{{ rec_karta(r) }}{% endfor %}</div>
+<p style="margin-top:var(--sp-6)"><a class="odkaz" href="{{ B }}recenze/">Přečíst všech {{ R.recenze|length }} recenzí →</a></p></div></section>
+
+{{ cenik_sekce() }}
+{{ faq_sekce() }}
+{{ kontakt_sekce() }}
+{{ poptavka_sekce(fid='pf-uvod') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

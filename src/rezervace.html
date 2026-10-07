@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import pod_hero, formular, faq_sekce, kontakt_sekce, cta_sekce %}
+{% set P = T.rezervace %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+<section class="sekce" id="poptavka" aria-labelledby="rez-h"><div class="container"><div class="kontakt-grid"><div>
+<h2 id="rez-h">{{ P.kroky_nadpis }}</h2>
+<ol class="seznam-odrazky" style="margin-top:var(--sp-5)">{% for k in P.kroky %}<li>{{ ic('check', 18) }}{{ loop.index }}. {{ k|nb }}</li>{% endfor %}</ol>
+<h3 style="margin-top:var(--sp-8)">Cena podle délky pobytu</h3>
+<div class="tab-obal" style="margin-top:var(--sp-4)"><table class="tab"><thead><tr><th scope="col">Délka pobytu</th><th scope="col" class="cislo">Cena za osobu a noc</th></tr></thead><tbody>{% for r in C.delka %}<tr><th scope="row">{{ r.noci }}</th><td class="cislo"><b>{{ r.cena|kc }}</b></td></tr>{% endfor %}</tbody></table></div>
+<h3 style="margin-top:var(--sp-8)">Sezóny</h3>
+<div class="tab-obal" style="margin-top:var(--sp-4)"><table class="tab"><tbody>{% for r in C.sezony %}<tr><th scope="row">{{ r.nazev }}{% if r.stitek %} <span class="badge badge--obsazeno">{{ r.stitek }}</span>{% endif %}</th><td class="cislo">{{ r.cena|kc }}</td></tr>{% endfor %}</tbody></table></div>
+<h3 style="margin-top:var(--sp-8)">Podmínky</h3>
+<ul class="seznam-odrazky" style="margin-top:var(--sp-4)">{% for p in C.podminky %}<li>{{ ic('check', 18) }}{{ p|nb }}</li>{% endfor %}</ul>
+{% if C.poznamka %}<p class="pozn" style="margin-top:var(--sp-5)">{{ C.poznamka|nb }}</p>{% endif %}
+</div>{{ formular('pf-rez') }}</div></div></section>
+{{ faq_sekce() }}
+{{ kontakt_sekce() }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}

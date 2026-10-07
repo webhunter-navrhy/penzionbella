@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% from '_macros.html' import ap_karta, pod_hero, faq_sekce, poptavka_sekce, cta_sekce %}
+{% set P = T.apartmany %}
+{% block main %}
+<main id="obsah">
+{{ pod_hero(P, P.h1) }}
+<section class="sekce" aria-labelledby="seznam-h"><div class="container">
+<div class="sekce-hlava"><div><h2 id="seznam-h">{{ P.seznam_nadpis }}</h2><p>{{ P.seznam_text|nb }}</p></div><p class="hodnoceni"><b>{{ S.kapacita_text }} osob</b><span>· {{ AP|length }} {{ AP|length|apartmany }} · {{ S.loznice_celkem }} {{ S.loznice_celkem|loznic }}</span></p></div>
+<div class="karty karty--ap">{% for a in AP %}{{ ap_karta(a, loop.first) }}{% endfor %}</div></div></section>
+<section class="sekce sekce--plocha sekce--tesna" aria-labelledby="prehled-h"><div class="container"><h2 id="prehled-h" style="margin-bottom:var(--sp-5)">{{ P.kapacita_nadpis }}</h2>
+<div class="tab-obal"><table class="tab tab--siroka"><caption>Rozdělení lůžek v penzionu</caption><thead><tr><th scope="col">Apartmán</th><th scope="col">Patro</th><th scope="col" class="cislo">Ložnice</th><th scope="col" class="cislo">Lůžka</th><th scope="col">Vybavení</th></tr></thead><tbody>
+{% for a in AP %}<tr><th scope="row">{{ a.nazev }}</th><td data-l="Patro">{{ a.patro }}</td><td class="cislo" data-l="Ložnice">{{ a.loznice }}</td><td class="cislo" data-l="Lůžka">{{ a.luzka }}</td><td data-l="Vybavení">{{ a.vybaveni }}</td></tr>{% endfor %}
+<tr><th scope="row">Celkem</th><td data-l="Patro">{{ P.kapacita_celkem_patro }}</td><td class="cislo" data-l="Ložnice">{{ S.loznice_celkem }}</td><td class="cislo" data-l="Lůžka">{{ S.luzka_celkem }}</td><td data-l="Vybavení">{{ P.kapacita_celkem_vybaveni }}</td></tr></tbody></table></div>
+{% if P.kapacita_pozn %}<p class="pozn" style="margin-top:var(--sp-4)">{{ P.kapacita_pozn|nb }}</p>{% endif %}</div></section>
+<section class="sekce" aria-labelledby="vybaveni-h"><div class="container"><div class="sekce-hlava"><div><h2 id="vybaveni-h">{{ T.vybaveni.nadpis }}</h2><p>{{ T.vybaveni.text|nb }}</p></div></div>
+<div class="vyb-grid">{% for v in T.vybaveni.polozky %}<div class="vyb-i"><span class="usp-ikona">{{ ic(v.ikona, 22) }}</span><div><h3>{{ v.nadpis }}</h3><p>{{ v.text|nb }}</p></div></div>{% endfor %}</div></div></section>
+{{ faq_sekce() }}
+{{ poptavka_sekce(fid='pf-ap') }}
+{{ cta_sekce() }}
+</main>
+{% endblock %}
