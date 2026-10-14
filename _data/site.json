@@ -34,7 +34,7 @@
     "loznice": 7
   },
   "domena": "https://penzion-bella.cz",
-  "indexovat": false,
+  "indexovat": true,
   "og_foto": "images/dum-leto.jpg",
   "nekuracky": true,
   "mazlicci": false,
