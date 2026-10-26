@@ -8,18 +8,51 @@
     "perex": "Celý penzion jen pro vaši partu nebo několik rodin — čtyři apartmány, 12–17 lůžek.",
     "perex_detail": "Velká společenská místnost s kuchyňkou, fotbálek a šipky, parkování před domem.",
     "znacky": [
-      { "ikona": "map-pin", "text": "Údolní 410, Desná" },
-      { "ikona": "users", "text": "12–17 osob ve 4 apartmánech" },
-      { "ikona": "tram-front", "text": "Vlak 200 m od domu" }
+      {
+        "ikona": "map-pin",
+        "text": "Údolní 410, Desná"
+      },
+      {
+        "ikona": "users",
+        "text": "12–17 osob ve 4 apartmánech"
+      },
+      {
+        "ikona": "tram-front",
+        "text": "Vlak 200 m od domu"
+      }
     ],
     "lista_poznamka": "Poptávka je nezávazná, jednáte přímo s majitelem",
     "usp": [
-      { "ikona": "house", "nadpis": "Celý penzion jen pro vás", "text": "12–17 osob ve 4 apartmánech, po dohodě i méně" },
-      { "ikona": "users", "nadpis": "Společenská místnost pro všechny", "text": "Velký stůl, sedačka, chytrá TV a reproduktor" },
-      { "ikona": "gamepad2", "nadpis": "Fotbálek, šipky, dětský koutek", "text": "Zábava pro dospělé i děti přímo v domě" },
-      { "ikona": "tram-front", "nadpis": "Vlak 200 m od domu", "text": "Trať Tanvald – Kořenov – Harrachov" },
-      { "ikona": "car", "nadpis": "Parkování před penzionem", "text": "Na upraveném soukromém pozemku" },
-      { "ikona": "wifi", "nadpis": "Wi-Fi v celém domě", "text": "Plus chytrá televize a bluetooth reproduktor" }
+      {
+        "ikona": "house",
+        "nadpis": "Celý penzion jen pro vás",
+        "text": "12–17 osob ve 4 apartmánech, po dohodě i méně"
+      },
+      {
+        "ikona": "users",
+        "nadpis": "Společenská místnost pro všechny",
+        "text": "Velký stůl, sedačka, chytrá TV a reproduktor"
+      },
+      {
+        "ikona": "gamepad2",
+        "nadpis": "Fotbálek, šipky, dětský koutek",
+        "text": "Zábava pro dospělé i děti přímo v domě"
+      },
+      {
+        "ikona": "tram-front",
+        "nadpis": "Vlak 200 m od domu",
+        "text": "Trať Tanvald – Kořenov – Harrachov"
+      },
+      {
+        "ikona": "car",
+        "nadpis": "Parkování před penzionem",
+        "text": "Na upraveném soukromém pozemku"
+      },
+      {
+        "ikona": "wifi",
+        "nadpis": "Wi-Fi v celém domě",
+        "text": "Plus chytrá televize a bluetooth reproduktor"
+      }
     ],
     "onas_nadpis": "Celý dům pro několik rodin nebo partu přátel",
     "onas_lead": "Penzion Bella stojí v klidné části Desné, s dobrou dostupností do Jizerských hor i Krkonoš. Pronajímá se jako celý objekt: čtyři samostatné apartmány se sedmi ložnicemi, dohromady pro 12 až 17 osob. Po dohodě ubytujeme i menší skupinu.",
@@ -30,10 +63,22 @@
       "Vlaková zastávka na trati Tanvald – Kořenov – Harrachov je asi 200 metrů od domu, parkujete na soukromém pozemku před penzionem."
     ],
     "cisla": [
-      { "cislo": "12–17", "popis": "osob v celém objektu" },
-      { "cislo": "4", "popis": "samostatné apartmány" },
-      { "cislo": "7", "popis": "ložnic v domě" },
-      { "cislo": "200 m", "popis": "k vlakové zastávce" }
+      {
+        "cislo": "12–17",
+        "popis": "osob v celém objektu"
+      },
+      {
+        "cislo": "4",
+        "popis": "samostatné apartmány"
+      },
+      {
+        "cislo": "7",
+        "popis": "ložnic v domě"
+      },
+      {
+        "cislo": "200 m",
+        "popis": "k vlakové zastávce"
+      }
     ],
     "apartmany_nadpis": "Čtyři apartmány, sedm ložnic",
     "apartmany_text": "Každý apartmán má vlastní WC a sprchový kout. Objekt se pronajímá celý, takže apartmány si rozdělíte podle toho, jak přijedete.",
@@ -46,15 +91,51 @@
     "nadpis": "Vybavení a služby v domě",
     "text": "Co je ve společných prostorách k dispozici všem hostům.",
     "polozky": [
-      { "ikona": "users", "nadpis": "Společenská místnost s kuchyňkou", "text": "Prostorný stůl pro celou partu, sedací souprava, chytrá televize s bluetooth reproduktorem a WC." },
-      { "ikona": "utensils", "nadpis": "Kuchyňka pro velkou skupinu", "text": "Dvě mikrovlnky, dvě lednice a mrazák, myčka, dvě rychlovarné konvice, plynový vařič, elektrická trouba, kávovar, toustovač a topinkovač." },
-      { "ikona": "gamepad2", "nadpis": "Fotbálek, šipky a dětský koutek", "text": "Zábava pro dospělé i děti přímo ve společné části domu — nemusíte nikam jezdit." },
-      { "ikona": "bath", "nadpis": "Čtyři samostatné apartmány", "text": "Každý apartmán má vlastní WC a sprchový kout; apartmány č. 1 a 2 mají navíc kuchyňku a samostatný vchod." },
-      { "ikona": "flame", "nadpis": "Terasa, venkovní krb a gril", "text": "Před domem je malý dvorek s posezením, krbem a grilem — na letní večery se skupinou." },
-      { "ikona": "car", "nadpis": "Parkování na soukromém pozemku", "text": "Přímo před penzionem, na upraveném soukromém pozemku." },
-      { "ikona": "thermometer", "nadpis": "Vytápění a Wi-Fi", "text": "Centrální plynové topení a přímotopy, Wi-Fi v celém objektu. Spotřebovaný plyn se účtuje podle skutečné spotřeby." },
-      { "ikona": "beer", "nadpis": "Výčepní zařízení k zapůjčení", "text": "K pobytu si můžete půjčit výčepní zařízení PYGMY 25/K Green Line." },
-      { "ikona": "utensils", "nadpis": "Stravování podle vás", "text": "Vaříte si sami ve společné kuchyňce nebo v apartmánu, v okolí jsou restaurace a jídlo lze dovézt z nedaleké jídelny Sklář." }
+      {
+        "ikona": "users",
+        "nadpis": "Společenská místnost s kuchyňkou",
+        "text": "Prostorný stůl pro celou partu, sedací souprava, chytrá televize s bluetooth reproduktorem a WC."
+      },
+      {
+        "ikona": "utensils",
+        "nadpis": "Kuchyňka pro velkou skupinu",
+        "text": "Dvě mikrovlnky, dvě lednice a mrazák, myčka, dvě rychlovarné konvice, plynový vařič, elektrická trouba, kávovar, toustovač a topinkovač."
+      },
+      {
+        "ikona": "gamepad2",
+        "nadpis": "Fotbálek, šipky a dětský koutek",
+        "text": "Zábava pro dospělé i děti přímo ve společné části domu — nemusíte nikam jezdit."
+      },
+      {
+        "ikona": "bath",
+        "nadpis": "Čtyři samostatné apartmány",
+        "text": "Každý apartmán má vlastní WC a sprchový kout; apartmány č. 1 a 2 mají navíc kuchyňku a samostatný vchod."
+      },
+      {
+        "ikona": "flame",
+        "nadpis": "Terasa, venkovní krb a gril",
+        "text": "Před domem je malý dvorek s posezením, krbem a grilem — na letní večery se skupinou."
+      },
+      {
+        "ikona": "car",
+        "nadpis": "Parkování na soukromém pozemku",
+        "text": "Přímo před penzionem, na upraveném soukromém pozemku."
+      },
+      {
+        "ikona": "thermometer",
+        "nadpis": "Vytápění a Wi-Fi",
+        "text": "Centrální plynové topení a přímotopy, Wi-Fi v celém objektu. Spotřebovaný plyn se účtuje podle skutečné spotřeby."
+      },
+      {
+        "ikona": "beer",
+        "nadpis": "Výčepní zařízení k zapůjčení",
+        "text": "K pobytu si můžete půjčit výčepní zařízení PYGMY 25/K Green Line."
+      },
+      {
+        "ikona": "utensils",
+        "nadpis": "Stravování podle vás",
+        "text": "Vaříte si sami ve společné kuchyňce nebo v apartmánu, v okolí jsou restaurace a jídlo lze dovézt z nedaleké jídelny Sklář."
+      }
     ]
   },
   "apartmany": {
@@ -142,9 +223,21 @@
     "uvod": "Údolní 410 v Desné, v klidné části obce pod Jizerskými horami. Dům poznáte podle oválu s nápisem Bella nad vchodem a čísla 410.",
     "email_pozn": "Podle recenzí hostů majitelé reagují téměř ihned",
     "prijezd": [
-      { "ikona": "car", "nadpis": "Autem", "text": "Do Desné po silnici I/10 z Tanvaldu směr Harrachov, pak do ulice Údolní k domu č. p. 410. Parkujete přímo před penzionem na soukromém pozemku." },
-      { "ikona": "tram-front", "nadpis": "Vlakem", "text": "Zastávka na trati Tanvald – Kořenov – Harrachov je zhruba 200 metrů od penzionu. Odtud se pohodlně dostanete i na hřebeny Jizerských hor." },
-      { "ikona": "navigation", "nadpis": "Autobusem", "text": "Autobusová zastávka je v Desné v docházkové vzdálenosti; z ní je to k protržené přehradě 3,7 km." }
+      {
+        "ikona": "car",
+        "nadpis": "Autem",
+        "text": "Do Desné po silnici I/10 z Tanvaldu směr Harrachov, pak do ulice Údolní k domu č. p. 410. Parkujete přímo před penzionem na soukromém pozemku."
+      },
+      {
+        "ikona": "tram-front",
+        "nadpis": "Vlakem",
+        "text": "Zastávka na trati Tanvald – Kořenov – Harrachov je zhruba 200 metrů od penzionu. Odtud se pohodlně dostanete i na hřebeny Jizerských hor."
+      },
+      {
+        "ikona": "navigation",
+        "nadpis": "Autobusem",
+        "text": "Autobusová zastávka je v Desné v docházkové vzdálenosti; z ní je to k protržené přehradě 3,7 km."
+      }
     ],
     "poptavka_nadpis": "Napište nám",
     "poptavka_lead": "Termín, počet osob a kontakt — ověříme dostupnost a pošleme cenu. Poptávka je nezávazná."
@@ -162,19 +255,37 @@
       "Pošlete poptávku s termínem a počtem osob — nebo rovnou zavoláte: Petr 721 929 462, Dáša 732 789 550.",
       "Ověříme, že je termín volný, a potvrdíme cenu za osobu a noc podle délky pobytu a sezóny.",
       "Domluvíme podrobnosti pobytu: předání objektu, vratnou kauci 5 000 Kč a odečet plynu.",
-      "Při odjezdu doplatíte spotřebovaný plyn a pobytový poplatek 15 Kč za osobu a noc; kauci vracíme po předání objektu."
+      "Při odjezdu doplatíte spotřebovaný plyn ; kauci vracíme po předání objektu."
     ]
   },
   "poptavka": {
     "nadpis": "Nezávazná poptávka termínu",
     "lead": "Vyplňte termín, počet osob a kontakt. Ověříme dostupnost a pošleme cenu — nic tím neplatíte.",
     "body": [
-      { "ikona": "check", "text": "Píšete přímo majiteli penzionu, ne rezervačnímu portálu." },
-      { "ikona": "users", "text": "Objekt se pronajímá celý pro 12–17 osob; po dohodě i pro menší skupinu." },
-      { "ikona": "check", "text": "Minimální délka pobytu 2 noci; cena od 300 Kč za osobu a noc." },
-      { "ikona": "bath", "text": "4 apartmány, 7 ložnic, každý apartmán s vlastním WC a sprchovým koutem." },
-      { "ikona": "tv", "text": "Wi-Fi, chytrá televize, bluetooth reproduktor, fotbálek a šipky." },
-      { "ikona": "check", "text": "Vratná kauce 5 000 Kč, plyn a pobytový poplatek 15 Kč za osobu a noc se účtují zvlášť." }
+      {
+        "ikona": "check",
+        "text": "Píšete přímo majiteli penzionu, ne rezervačnímu portálu."
+      },
+      {
+        "ikona": "users",
+        "text": "Objekt se pronajímá celý pro 12–17 osob; po dohodě i pro menší skupinu."
+      },
+      {
+        "ikona": "check",
+        "text": "Minimální délka pobytu 2 noci; cena od 300 Kč za osobu a noc."
+      },
+      {
+        "ikona": "bath",
+        "text": "4 apartmány, 7 ložnic, každý apartmán s vlastním WC a sprchovým koutem."
+      },
+      {
+        "ikona": "tv",
+        "text": "Wi-Fi, chytrá televize, bluetooth reproduktor, fotbálek a šipky."
+      },
+      {
+        "ikona": "check",
+        "text": "Vratná kauce 5 000 Kč, plyn a pobytový poplatek 15 Kč za osobu a noc se účtují zvlášť."
+      }
     ],
     "formular_nadpis": "Poptávka termínu",
     "dekujeme": "Ozveme se vám s potvrzením volného termínu a cenou. Poptávka je nezávazná."
