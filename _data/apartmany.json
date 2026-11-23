@@ -26,13 +26,6 @@
         "alt": "Apartmán č. 1 — pokoj s jídelním stolem, samostatným lůžkem a manželskou postelí",
         "w": 1600,
         "h": 1200
-      },
-      {
-        "src": "images/ap1-koupelna.jpg",
-        "alt": "Apartmán č. 1 — sprchový kout a umyvadlo",
-        "w": 900,
-        "h": 1200,
-        "koupelna": true
       }
     ]
   },
