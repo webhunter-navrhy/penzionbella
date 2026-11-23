@@ -81,11 +81,6 @@
     "text": "Last minute nabídka majitele: 370 Kč za dospělou osobu a noc plus spotřebovaný plyn.",
     "tabulka_nadpis": "Volné termíny — cena za dospělou osobu a noc",
     "tlacitko": "Poptat víkend",
-    "terminy": [
-      {
-        "termin": "27.–29. 11. 2026",
-        "cena": "370"
-      }
-    ]
+    "terminy": []
   }
 }
